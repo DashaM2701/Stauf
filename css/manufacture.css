@@ -35,7 +35,7 @@
 
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("/images/BGmanufacture.jpg");
+  background-image: url("images/BGmanufacture.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

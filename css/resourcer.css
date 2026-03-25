@@ -19,7 +19,7 @@
 }
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("/images/BG-header.jpg");
+  background-image: url("images/BG-header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
