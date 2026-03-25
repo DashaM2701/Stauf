@@ -9,6 +9,11 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
+p{
+  font-family: "Gilroy", sans-serif;
+ 
+
+}
 
 /* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
 .splide__pagination {
@@ -35,7 +40,7 @@
 
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("../images/BGmanufacture.jpg");
+  background-image: url("../images/BGAbout.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -364,6 +369,13 @@ font-size: 24px;
   margin-bottom: 112px;
   text-transform: uppercase;
 }
+.philosophy__subtitle{
+  font-family: "Gilroy", sans-serif;
+ letter-spacing: 0.06em;
+ margin-bottom: 8px;
+ color: var(--text-grey-dark);
+
+}
 
 .philosophy__description p {
   font-family: "Gilroy", sans-serif;
@@ -374,330 +386,149 @@ font-size: 24px;
   text-align: justify;
 }
 
-/* Repository секция (видео-превью) */
-.repository {
-  padding-bottom: 150px;
+.years {
+    padding: 150px 0;
+    background-image: url('../images/AboutSectionImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  right 0;
+    height: 473px;
 }
-
-.repository-box-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 64px;
+.years .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
-
-.repository-box-head-title {
-  font-size: 32px;
-  font-family: "EB Garamond", serif;
+.years-box {
+   width: 50%;
 }
-
-.btn-outline {
-  padding: 12px 25px;
-  border: 1px solid var(--bg-btn);
-  color: var(--bg-btn);
-  transition: 0.3s all;
-}
-
-.repository-btn-mob {
-  display: none;
-}
-
-.video-preview-card {
-  position: relative;
-  display: block;
- 
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background-color: #000;
-  transition: 0.3s all;
-}
-
-.card_img-wrap {
-  position: relative;
-  width: 100%;
-  height: 544px;
-  overflow: hidden;
-  background-color: #000;
-  transition: 0.3s all;
-
-}
-
-.card_img-wrap.card_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-out;
-  transform-origin: center center;
-
-}
-
-.card_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-
-.card_content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  z-index: 10;
-}
-
-.card_insta-icon {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_insta-icon svg {
-  max-width: 100%;
-  height: auto;
-}
-
-.card_play-btn {
-  height: 80px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.card_play-btn svg {
-  width: 100%;
-  height: auto;
-}
-
-.card_play-btn:hover {
-  opacity: 1;
-}
-.splide__slide img {
-  width: 100%;
-  height: 100%;
-}
-
-.machines-section {
-  padding-bottom: 150px;
-  
- 
-}
-
-.machines-container {
- 
-  display: grid;
-
-  grid-template-columns: 1.2fr 1fr; 
-  gap: 48px;
-  align-items: center;
-}
-
-.machines-title {
-  font-family: "EB Garamond", serif;
-  
-  font-size: 32px;
-  
-  
-  letter-spacing: 0.06em;
-  margin-bottom: 112px;
-  text-transform: uppercase;
-}
-
-
-.machines-description {
-  letter-spacing: 0.06em;
+.years-box-title {
   font-family: "Gilroy", sans-serif;
-  
-  
-  color: var(--text-grey-dark);
- 
+  font-size: 20px;
+  letter-spacing: 0.06em;
+margin-bottom: 16px;
+color: var(--text);
+text-transform: uppercase;
+}
+.years-box-subtitle {
+  font-family: "Gilroy", sans-serif;
+  letter-spacing: 0.06em;
+
+color: var(--text-grey);
+
+}
+.dekla {
+    padding: 150px 0;
 }
 
-.machines-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
+.dekla-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
 }
-
-.machines-list li {
-  margin-bottom: 5px;
+.dekla-box-text {
+} 
+.dekla-box-text-title {
+  font-family: "EB Garamond", serif;
+font-size: 32px;
+letter-spacing: 0.06em;
+color: var(--dark);
+margin-bottom: 112px;
+text-transform: uppercase;
 }
-
-.machines-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+.dekla-box-text-desc {
+    color: var(--text-grey-dark);
 }
-
-.machine-img {
-  width: 100%;
-  height: 500px;
-  aspect-ratio: 2 / 3; 
-  overflow: hidden;
-}
-
-.machine-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-hero {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: var(--text);
-  position: relative;
- 
-}
-.video-hero .container{
+.dekla-box-img {
+    height: 100%;
     width: 100%;
 }
-
-.video-hero__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.dekla-box-img img{
+       height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-
-.video-hero__bg img, 
-.video-hero__bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Затемнение фона */
-.video-hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  z-index: 2;
-}
-
-
-.video-hero__content {
+.principles {
   position: relative;
-  z-index: 3;
-  width: 100%;
- 
+  background-color: #F5F5F4; 
+  padding: 150px 0 0 0;
+  overflow: hidden;
+  font-family: "EB Garamond", serif;
   
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
 }
 
-.video-hero__title {
-  font-family: "EB Garamond", serif;
 
+
+.principles__title {
   font-size: 32px;
-  
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 112px;
+  margin-bottom: 64px;
+  color: var(--dark);
 }
 
-.video-hero__subtitle {
+.principles__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 64px; 
+  text-align: left;
+}
+
+.principles__item {
+  position: relative;
+  padding-left: 50px; 
+}
+
+/* Стилизация римских цифр через атрибут data-number */
+.principles__item::before {
+  content: attr(data-number);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "EB Garamond", serif;
+
+  font-size: 20px;
+  color: var(--text-grey); 
+}
+
+.principles__subtitle {
+  font-family: "Gilroy", sans-serif;
+
+  font-size: 20px;
+ 
+  letter-spacing: 0.06em;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.principles__text {
   font-family: "Gilroy", sans-serif;
   
- 
-  letter-spacing: 0.06em;
-  color: var(--text-grey);
-  
-  max-width: 350px;
-}
 
-/* Кнопка Play */
-.video-hero__play-btn {
-position: absolute;
-left: 50%;
-transition: 0.3s all;
-cursor: pointer;
+    letter-spacing: 0.06em;
+
+  color: var(--text-grey-dark);
 }
 
 
-
-.video-hero__play-btn:hover {
-  transform: scale(1.1);
-}
-
-.gallery {
-
-  padding-bottom: 150px;
- 
-}
-
-.gallery__title {
-  font-family: "EB Garamond", serif;
-
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
- 
-  
-  margin-bottom: 64px;
-}
-
-.gallery__grid {
-  display: grid;
-  
-  grid-template-columns: repeat(4, 1fr);
-
-  grid-auto-rows: 180px; 
-  gap: 15px;
-}
-
-.gallery__item img {
+.principles__footer-image {
+  margin-top: 50px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
-
-.item-1 { grid-column: 1; grid-row: 1; }
-.item-2 { grid-column: 1; grid-row: 2; }
-
-
-.item-3 { 
-  grid-column: 2 / 4; 
-  grid-row: 1 / 3; 
+.principles__footer-image img {
+  max-width: 600px;
+  width: 100%;
+ 
 }
-
-.item-4 { grid-column: 4; grid-row: 1 / 3; }
-
-
-.item-5 { grid-column: 1 / 3; grid-row: 3; }
-.item-6 { grid-column: 3; grid-row: 3; }
-.item-7 { grid-column: 4; grid-row: 3; }
 
 /* ===== Footer ===== */
 .footer {
@@ -813,6 +644,7 @@ cursor: pointer;
 .footer_col-info-mob {
   display: none;
 }
+
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   .burger {
@@ -940,41 +772,6 @@ cursor: pointer;
 
 
  
-
-  .repository-box-head {
-    margin-bottom: 38px;
-  }
-
-  .repository-box-head-title {
-    font-size: 24px;
-  }
-
-  .btn-outline {
-    font-size: 14px;
-  }
-
-  .repository {
-    padding-bottom: 54px;
-  }
-
-  .splide__pagination__page {
-    width: 21px !important;
-    height: 2px !important;
-  }
-
-  .splide__pagination {
-    margin-top: 32px !important;
-  }
-
-  .card_img-wrap {
-    height: 250px;
-  }
-  .machines-gallery{
-    grid-template-columns: 1fr;
-  }
-  .machine-img{
-    height: 270px;
-  }
   .luxury-page{
     padding: 50px 0;
   }
@@ -987,11 +784,23 @@ cursor: pointer;
   }
   .philosophy__content{
     padding: 42px 0;
+    display: flex;
+    flex-direction: column-reverse;
 
   }
+  .philosophy__title{
+order: -1;
+margin-bottom: 0;
+  }
+  .philosophy__description{
+    margin-bottom: 36px;
+  }
   .philosophy__image{
-    order: 1;
+   
     height: 470px;
+  }
+  .philosophy__subtitle{
+    font-size: 14px;
   }
   .philosophy__title, .machines-title{
     font-size: 24px;
@@ -1000,20 +809,37 @@ cursor: pointer;
   .philosophy__description, .machines-list{
     font-size: 14px;
   }
-  .video-hero__title{
+ .years{
+    height: 397px;
+    padding: 70px 0;
+    background-position: 86% 0;
+
+ }
+ .dekla{
+    padding: 50px 0;
+ }
+ .dekla-box{
+    gap: 24px;
+    padding: 66px 0;
+ }
+ .dekla-box-text-title{
     font-size: 24px;
-  }
-  .video-hero{
-    height: 390px;
-  }
-  .gallery{
-    padding-bottom: 50px;
-  }
-  .machines-section{
-    padding-bottom: 56px;
-  }
+    margin-bottom: 24px;
+ }
+ .dekla-box-text-desc{
+    font-size: 14px;
+ }
+ .years-box-title{
+    font-size: 18px;
+ }
+ .years-box-subtitle{
+    font-size: 14px;
+ }
   .philosophy__container{
     gap: 24px;
+  }
+  .principles{
+    padding-top: 70px;
   }
   .footer_logo {
     height: 55px;
@@ -1044,7 +870,20 @@ cursor: pointer;
     width: 12px;
     height: 12px;
   }
+.principles__subtitle{
+    font-size: 16px;
 
+}
+.principles__text{
+    font-size: 14px;
+}
+.principles__grid{
+    gap: 24px;
+}
+.principles__title{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
 }
 
 /* Мобильные устройства (до 530px) */
@@ -1067,49 +906,19 @@ cursor: pointer;
   }
 
 
-  .card_play-btn {
-    height: 64px;
-  }
 
-  .repository-box-head .btn-outline {
-    display: none;
-  }
 
-  .repository-btn-mob {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-  }
+
   .philosophy__container{
     grid-template-columns: 1fr;
   }
-.machines-container{
-    grid-template-columns: 1fr;
-}
 
-.machines-gallery{
-    grid-template-columns: 1fr 1fr;
-}
-.video-hero{
-    height: 544px;
-}
-.video-hero__text{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-}
   .footer_top {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-.gallery__title{
-    font-size: 24px;
-}
-.gallery__title{
-    margin-bottom: 32px;
-}
+
   .footer_col.footer_col-info {
     display: none;
   }
@@ -1150,112 +959,42 @@ cursor: pointer;
     width: 24px;
     height: 24px;
   }
-  .gallery__grid {
-    /* На мобилке делаем 2 колонки */
-    grid-template-columns: 1fr 1fr; 
-    grid-auto-rows: minmax(100px, auto); 
-    gap: 10px;
+.philosophy__content{
+    padding: 0;
+    flex-direction: column;
+}
+.philosophy__title{
+order: 0;
+}
+.philosophy__description{
+    margin-bottom: 0;
+}
+  .years{
+    height: 593px;
+    background-image: url('../images/AboutSectionImgMob.jpg');
+    background-position: 0 35%;
+    padding: 56px 0;
   }
-
-  .gallery__item img {
-    height: 100%; /* Возвращаем заполнение ячейки */
+  .years .container{
+    justify-content: flex-start;
   }
-
-  /* 1. Первые две картинки в один ряд */
-  .item-1 { grid-column: 1; grid-row: 1; }
-  .item-2 { grid-column: 2; grid-row: 1; }
-
-  /* 2. Большая центральная картинка на весь ряд */
-  .item-3 { 
-    grid-column: 1 / 3; 
-    grid-row: 2; 
-    aspect-ratio: 1 / 1; /* Чтобы была квадратной/крупной */
+  .years-box{
+    width: 100%;
   }
-
-  /* 3. Левая высокая картинка (циферблат крупно) */
-  .item-4 { 
-    grid-column: 1; 
-    grid-row: 3 / 5; /* Занимает 2 строки в высоту */
+  .dekla-box{
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0;
   }
-
-  /* 4. Маленькие картинки справа от высокой */
-  .item-6 { grid-column: 2; grid-row: 3; }
-  .item-7 { grid-column: 2; grid-row: 4; }
-
-  /* 5. Нижняя широкая картинка (стрелка) */
-  .item-5 { 
-    grid-column: 1 / 3; 
-    grid-row: 5; 
+  .dekla-box-img{
+    height: 500px;
   }
-  
+  .principles{
+    padding-top: 56px;
+  }
+  .principles__grid{
+    grid-template-columns: 1fr;
+  }
 
  
-}
-@media(max-width:380px){
-   .card_img-wrap {
-    height: 544px;
-  }
-}
-
-
-
-
-
-/* ===== Hover-эффекты только для устройств с мышью (десктоп) ===== */
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover {
-    background-color: #ffffff;
-    border: 1px solid var(--bg-btn);
-    color: var(--bg-btn);
-  }
-
-  .btn-white:hover {
-    background: var(--bg-btn);
-    color: var(--text);
-  }
-  .btn-outline:hover{
-  background: var(--bg-btn);
-  color: var(--text);
-}
-
-
-
-  .card-container:hover .watch-block.active:not(:hover) {
-    transform: scale(1);
-    flex-grow: 1.2;
-    z-index: 1;
-  }
-
-  .card-container:hover .watch-block.active:not(:hover) .text-content {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-  }
-
-  .card-container:hover .watch-block:not(.active):not(:hover) {
-    flex-grow: 1.2;
-    transform: scale(1);
-  }
-
-  .watch-block:last-child:hover {
-    transform: scale(var(--watch-scale-factor)) translateX(-120px);
-    z-index: 10;
-  }
-
-  .card-container:hover .watch-block:not(:hover) {
-    transform: scale(0.95);
-  }
-
-  .video-preview-card:hover .card_img {
-    transform: scale(1.15);
-  }
-
-  .video-preview-card:hover .card_overlay {
-    opacity: 1;
-  }
-
-  .footer_list a:hover,
-  .footer_contact-info a:hover {
-    color: var(--text);
-  }
 }
