@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/contacts.css" />
+    <title>Resources - Retails</title>
+        <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/retalis.css" />
     <link rel="stylesheet" href="css/stylesheet.css" />
 </head>
 <body>
-    <div class="wrapper wrapper-black">
-        <!-- HEADER -->
-      <div class="black-header">
+    <div class="wrapper">
+            <!-- HEADER -->
+      <div class="">
         <div class="header_bg">
           <div class="container">
             <header class="header">
@@ -197,90 +197,103 @@
             </div>
           </div>
         </div>
-       
+      
       </div>
-      <main class="main">
-        <section class="main_contacts">
- <div class="container">
+        <main class="main">
+            <div class="container">
+                <section class="retails-page">
+  <div class="retails-container">
+    
+    <aside class="sidebar">
+      <div class="header-group">
+        <p class="subtitle">RESOURCES</p>
+        <h1 class="main-title">RETAILS</h1>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Stuttgart">
+        <button class="search-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+
+      <div class="store-card">
+        <img src="images/retalisImg.jpg" alt="Dekla Watches Store" class="store-img">
+        <div class="store-info">
+          <h3>DEKLA WATCHES</h3>
+          <p class="owner">inh. Yuriy Shapiro</p>
+          <address>
+            Burgholzstr. 23<br>
+            70376 Stuttgart<br>
+            Deutschland
+          </address>
           
-          <p class="contacts_category">Resources</p>
-                 <h1 class="contacts_title">Contact</h1>
-          
-         
+          <div class="contacts">
+            <p><strong>Phone:</strong> +49(0)71126898881</p>
+            <p><strong>Fax:</strong> +49(0)71126898882</p>
+            <p><strong>Email:</strong> info@deklawatches.com</p>
+          </div>
 
-          <div class="contacts_grid">
-            
-            <div class="contacts_info">
-              <div class="info_block">
-                <p>inh. Yuriy Shapiro</p>
-                <p>Burgholzstr. 23</p>
-                <p>70376 Stuttgart</p>
-                <p>Deutschland</p>
-              </div>
+          <div class="opening-times">
+            <p><strong>Opening times:</strong></p>
+            <p>MON — THU: 09:00 — 16:30</p>
+            <p>FRI: 09:00 — 12:00</p>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-              <div class="info_block">
-                <p class="info_label">Phone:</p>
-                <a href="tel:+49(0)1726859881">+49(0)1726859881</a>
-              </div>
-
-              <div class="info_block">
-                <p class="info_label">Fax:</p>
-                <a href="tel:+49(0)1726859882">+49(0)1726859882</a>
-              </div>
-
-              <div class="info_block">
-                <p class="info_label">Email:</p>
-                <a href="mailto:info@deklawtches.com">info@deklawtches.com</a>
-              </div>
-
-              <div class="info_block">
-                <p class="info_label">Web:</p>
-                <a href="http://www.deklawtches.com" target="_blank">www.deklawtches.com</a>
-              </div>
-
-              <div class="info_block">
-                <p class="info_label">USt-Id:</p>
-                <p>DE283176333</p>
-              </div>
+    <main class="map-view">
+      <div id="map">
+        <div class="map-placeholder">
+          <div class="map-pin" style="top: 55%; left: 60%;">
+            <div class="pin-popup">
+              <img src="images/retalisImg2.jpg" alt="Popup">
+              <p>DEKLA WATCHES</p>
             </div>
+            <div class="pin-icon">♥</div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-            <div class="contacts_form-wrap">
-              <h3 class="form_title">Can we help you?</h3>
-              <p class="form_descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              
-              <form class="contacts_form">
-                <div class="form_group">
-                  <input type="text" name="name" placeholder="Your Name" class="form_input" required>
+  </div>
+</section>
+            </div>
+        <div class="inquiry-footer">
+            <div class="container">
+                 <div class="footer-container">
+            <div class="inquiry-info">
+                <h3>FOR FURTHER INQUIRY</h3>
+                <p>Every detail of our timepiece carries its own narrative and technical rationale. Should you have inquiries regarding finishing or ergonomics, we remain at your service.</p>
+            </div>
+            
+            <form class="inquiry-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
                 </div>
-                
-                <div class="form_group">
-                  <input type="email" name="email" placeholder="Email" class="form_input" required>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
                 </div>
-                
-                <div class="form_group">
-                  <textarea name="message" placeholder="Message" class="form_textarea" required></textarea>
+                <div class="input-group">
+                    <textarea placeholder="Message" rows="4"></textarea>
                 </div>
-
-                <div class="form_bottom">
-                  <label class="form_checkbox-label">
+                <div class="form-bottom">
+                    <label class="form_checkbox-label">
                     <input type="checkbox" name="privacy" class="form_checkbox" required>
                     <span class="checkbox_custom"></span>
                     I consent to the processing of my data in accordance with the Privacy Policy.
                   </label>
-                  
-                  <button type="submit" class="form_btn btn-white">Send</button>
+                    <button type="submit" class="submit-btn btn-white">Send</button>
                 </div>
-              </form>
+            </form>
+        </div>
             </div>
-            
-          </div> 
-         </div>
-        </section>
        
-      </main>
-        <!-- FOOTER -->
+    </div>
+        </main>
+      
+          <!-- FOOTER -->
       <footer class="footer">
         <div class="container">
           <div class="footer_top">
@@ -363,9 +376,9 @@
         </div>
       </footer>
     </div>
-   
-    <script src="js/burger.js"></script>
-    <script src="js/contactForm.js"></script>
-   
+      <script src="js/burger.js"></script>
+        <script src="js/form.js"></script>
+        
+
 </body>
 </html>

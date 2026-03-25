@@ -1,12 +1,12 @@
 /* ===== Импорт шрифтов и CSS-переменные ===== */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --text: #fff;
   --text-grey: #babbb7;
-  --text-grey-dark: #767A7E;
+  --text-grey-dark: #767a7e;
   --bg-btn: #24262a;
-  --dark: #0A0D0E;
+  --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
 
@@ -62,7 +62,9 @@
   width: 100%;
   height: 836px;
   position: relative;
-  transition: opacity 1.5s ease, background-image 1s ease-in-out;
+  transition:
+    opacity 1.5s ease,
+    background-image 1s ease-in-out;
 }
 
 .header_wrapp.fade {
@@ -79,7 +81,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header_logo-link {
@@ -142,6 +144,7 @@
 
 .mega-menu,
 .resources-menu {
+  height: 100vh;
   position: absolute;
   left: 0;
   width: 100%;
@@ -227,7 +230,7 @@
   right: 0;
   object-fit: cover;
   transition: 0.3s all;
-
+  width: 100%;
 }
 
 .card-title {
@@ -277,7 +280,6 @@
   width: 522px;
 }
 .showcase-section {
-
   padding: 70px 0;
 
   display: flex;
@@ -285,13 +287,9 @@
   justify-content: center;
 
   align-items: center;
-
 }
 
-
-
 .card-container {
-
   display: flex;
 
   justify-content: center;
@@ -301,13 +299,9 @@
   gap: 24px;
 
   width: 100%;
-
 }
 
-
-
 .watch-block {
-
   display: flex;
 
   align-items: center;
@@ -316,38 +310,24 @@
 
   flex-grow: 1;
 
-
-
   transition:
-
     transform 0.4s ease,
-
     flex-grow 0.4s ease,
-
     opacity 0.4s ease,
-
     z-index 0.4s ease;
-
 }
 
-
-
 .watch-image-wrap {
-
-  flex-shrink:0 ;
+  flex-shrink: 0;
 
   max-width: 250px;
 
   display: flex;
 
   justify-content: center;
-
 }
 
-
-
 .watch-img {
-
   max-width: 100%;
 
   height: auto;
@@ -357,41 +337,25 @@
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
 
   transform: translateX(0);
-
 }
 
-
-
 .text-content {
-
- 
-
   opacity: 0;
 
   visibility: hidden;
 
   transform: translateY(20px);
 
-
-
   transition:
-
     opacity 0.4s ease,
-
     visibility 0.4s ease,
-
     transform 0.5s ease,
-
     color 0.4s ease;
 
   will-change: opacity, transform;
-
 }
 
-
-
 .text-title {
-
   font-size: 20px;
 
   letter-spacing: 0.06em;
@@ -403,13 +367,9 @@
   margin-bottom: 100px;
 
   font-family: "Gilroy", sans-serif;
-
 }
 
-
-
 .text-descr {
-
   font-size: 14px;
 
   line-height: 1.6;
@@ -419,13 +379,9 @@
   margin-bottom: 30px;
 
   font-family: "Gilroy", sans-serif;
-
 }
 
-
-
 .btn {
-
   display: inline-block;
 
   padding: 12px 30px;
@@ -443,41 +399,23 @@
   transition: background 0.3s ease;
 
   font-family: "Gilroy", sans-serif;
-
 }
 
-
-
 .btn:hover {
-
   background-color: #ffffff;
-
-
 
   border: 1px solid var(--bg-btn);
 
   color: var(--bg-btn);
-
 }
-
-
 
 .watch-block.active,
-
 .watch-block:hover {
-
-transform: scale(var(--watch-scale-factor)) translateX(-100px);
-
-z-index: 1;
-
+  transform: scale(var(--watch-scale-factor)) translateX(-100px);
 }
 
-
-
 .watch-block.active .text-content,
-
 .watch-block:hover .text-content {
-
   opacity: 1;
 
   visibility: visible;
@@ -485,39 +423,25 @@ z-index: 1;
   transform: translateY(0);
 
   width: 400px;
-
 }
 
-
-
 .card-container:hover .watch-block.active:not(:hover) {
-
   transform: scale(1);
 
   flex-grow: 1.2;
 
- 
-
   z-index: 1;
-
 }
 
-
-
 .card-container:hover .watch-block.active:not(:hover) .text-content {
-
   opacity: 0;
 
   visibility: hidden;
 
   transform: translateY(20px);
-
 }
 
-
-
 .card-container:hover .watch-block:not(.active):not(:hover) {
-
   flex-grow: 1.2;
 
   transform: scale(1);
@@ -527,7 +451,11 @@ z-index: 1;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease, color 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.5s ease,
+    color 0.4s ease;
   will-change: opacity, transform;
 }
 
@@ -562,10 +490,8 @@ z-index: 1;
 
 .watch-block.active {
   transform: translateX(100px);
-
-
 }
-.btn-outline:active{
+.btn-outline:active {
   background: var(--bg-btn);
   color: var(--text);
 }
@@ -599,7 +525,7 @@ z-index: 1;
 .page_info-text {
   width: 486px;
   position: relative;
-  z-index: 11;
+  z-index: 1;
 }
 
 .page_info-text-desck {
@@ -716,7 +642,9 @@ z-index: 1;
   color: #fff;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
 }
 
 .blur_box.aos-animate {
@@ -819,7 +747,7 @@ z-index: 1;
 .video-preview-card {
   position: relative;
   display: block;
-  
+
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #000;
@@ -833,7 +761,6 @@ z-index: 1;
   overflow: hidden;
   background-color: #000;
   transition: 0.3s all;
-
 }
 
 .card_img-wrap.card_img {
@@ -845,7 +772,6 @@ z-index: 1;
   object-fit: cover;
   transition: transform 0.5s ease-out;
   transform-origin: center center;
-
 }
 
 .card_overlay {
@@ -906,7 +832,7 @@ z-index: 1;
 /* Subscribe секция */
 .subscribe {
   padding: 150px 0;
-  background-image: url('../images/subscImg.jpg');
+  background-image: url("../images/subscImg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1093,7 +1019,7 @@ z-index: 1;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #0A0D0E;
+    background: #0a0d0e;
     flex-direction: column;
     padding: 130px 20px;
     transition: 0.4s;
@@ -1394,7 +1320,7 @@ z-index: 1;
   .header_wrapp {
     height: 100vh;
   }
-  .header_logo-link{
+  .header_logo-link {
     height: 40px;
   }
 
@@ -1555,11 +1481,9 @@ z-index: 1;
     width: 24px;
     height: 24px;
   }
-
- 
 }
-@media(max-width:380px){
-   .card_img-wrap {
+@media (max-width: 380px) {
+  .card_img-wrap {
     height: 544px;
   }
 }
@@ -1576,10 +1500,10 @@ z-index: 1;
     background: var(--bg-btn);
     color: var(--text);
   }
-  .btn-outline:hover{
-  background: var(--bg-btn);
-  color: var(--text);
-}
+  .btn-outline:hover {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
 
   .watch-block:hover {
     transform: scale(var(--watch-scale-factor));
@@ -1624,6 +1548,466 @@ z-index: 1;
 
   .video-preview-card:hover .card_overlay {
     opacity: 1;
+  }
+
+  .footer_list a:hover,
+  .footer_contact-info a:hover {
+    color: var(--text);
+  }
+}
+.banner {
+  background: #8a8a8a;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+}
+/* ─── WATCHES ─── */
+.watch {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.watch img {
+  display: block;
+  transition:
+    width 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.7s ease,
+    opacity 0.7s ease;
+}
+
+/* LEFT watch — BIG by default */
+.watch-left {
+  left: 14px;
+}
+.watch-left img {
+  width: 200px;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.32));
+}
+
+/* RIGHT watch — SMALL by default */
+.watch-right {
+  right: 14px;
+}
+.watch-right img {
+  width: 125px;
+  opacity: 0.8;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
+}
+
+/* ─── TEXT — visible by default (near left watch) ─── */
+.text-block {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 228px;
+  z-index: 3;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    left 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    right 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s ease;
+}
+
+.text-block h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.text-block p {
+  font-size: 0.65rem;
+  line-height: 1.85;
+  color: #222;
+  font-weight: 300;
+  max-width: 185px;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #1a1a1a;
+  color: #f0ede8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  pointer-events: all;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+.btn:hover {
+  background: #8b7355;
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════
+   HOVER THE RIGHT WATCH ZONE
+   — use a hover zone overlay
+   ══════════════════════════════ */
+
+/* Invisible right-half hover zone */
+.hover-zone-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* When hovering the right zone: swap everything */
+.banner:has(.hover-zone-right:hover) .watch-left img {
+  width: 125px;
+  opacity: 0.8;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
+}
+
+.banner:has(.hover-zone-right:hover) .watch-right img {
+  width: 200px;
+  opacity: 1;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.35));
+}
+
+/* Text slides to right side */
+.banner:has(.hover-zone-right:hover) .text-block {
+  left: auto;
+  right: 148px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 580px) {
+}
+
+@media (max-width: 400px) {
+}
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .header_nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #0a0d0e;
+    flex-direction: column;
+    padding: 130px 20px;
+    transition: 0.4s;
+    align-items: flex-start;
+  }
+
+  .header_nav {
+    align-items: flex-start;
+  }
+
+  .card_img-wrapp {
+    display: none;
+  }
+
+  .header_logo,
+  .header_lang {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mega-menu-desktop {
+    display: none !important;
+  }
+
+  .mobile-subnav.active {
+    display: block;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    display: none !important;
+  }
+
+  .container.mega-menu-desktop {
+    gap: 40px;
+  }
+
+  .dropbtn {
+    font-size: 24px;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+  }
+
+  .header_nav-list.open {
+    right: 0;
+  }
+
+  .header_nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .header_nav-list-item-link,
+  .dropbtn {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: none;
+    padding: 20px 0 0 20px;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .mega-menu.active,
+  .resources-menu.active {
+    display: block;
+  }
+
+  .burger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  .header_wrapp {
+    height: 393px;
+  }
+
+  .text-main {
+    top: 140px;
+  }
+
+  .text-main-title {
+    font-size: 48px;
+  }
+
+  .text-title {
+    margin-bottom: 72px;
+  }
+  .featured {
+    padding: 50px 0;
+  }
+  .novelty-box-text-title {
+    font-size: 24px;
+  }
+  .novelty-box {
+    gap: 32px;
+  }
+  .novelty-box-text {
+    padding: 58px 0;
+  }
+
+  .btn-outline {
+    font-size: 14px;
+  }
+  .arrow_btn-wrap {
+    display: flex;
+  }
+
+  .footer_logo {
+    height: 55px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 8.5px;
+  }
+
+  .footer {
+    padding: 48px 0;
+  }
+
+  .footer_top {
+    margin-bottom: 69px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 7.5px;
+  }
+
+  .footer_socials img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .commitment__title {
+    font-size: 24px;
+  }
+  .commitment-content-header {
+    margin-bottom: 32px;
+  }
+  .commitment {
+    padding: 50px 0;
+  }
+  .commitment__subtitle {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .commitment__image {
+    height: 350px;
+  }
+  .featured-content-title {
+    font-size: 24px;
+  }
+  .featured-content-head {
+    margin-bottom: 32px;
+  }
+}
+
+/* Мобильные устройства (до 530px) */
+@media (max-width: 530px) {
+  .header_wrapp {
+    height: 100vh;
+  }
+  .header_logo-link {
+    height: 40px;
+  }
+
+  .text-main {
+    top: 170px;
+  }
+
+  .text-main-title {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .arrow_btn-wrap {
+    display: none;
+  }
+  .featured-content .splide__list {
+    flex-direction: column;
+  }
+  .novelty-box {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .novelty-box-text {
+    padding-top: 0;
+  }
+  .novelty-box-text-title {
+    margin-bottom: 32px;
+  }
+  .commitment-content-header .arrow_btn-wrap {
+    display: none;
+  }
+  .splide__pagination__page {
+    width: 21px !important;
+    height: 2px !important;
+  }
+
+  .splide__pagination {
+    margin-top: 32px !important;
+  }
+  .commitment__subtitle {
+    width: 300px;
+  }
+  .commitment__image {
+    height: 500px;
+  }
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_col.footer_col-info {
+    display: none;
+  }
+
+  .footer_col.footer_col-info.footer_col-info-mob {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 16px;
+  }
+
+  .footer_title {
+    margin-bottom: 16px;
+  }
+
+  .footer_top {
+    margin-bottom: 56px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 14px;
+  }
+
+  .footer_socials img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ===== Hover-эффекты только для устройств с мышью (десктоп) ===== */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background-color: #ffffff;
+    border: 1px solid var(--bg-btn);
+    color: var(--bg-btn);
+  }
+
+  .btn-outline:hover {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
+  .featured-content-card:hover .featured-content-card-img {
+    scale: 1.1;
+  }
+  .featured-content-card:hover .btn-outline {
+    background: var(--bg-btn);
+    color: var(--text);
   }
 
   .footer_list a:hover,

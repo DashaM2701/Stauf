@@ -9,22 +9,41 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
-.wrapper-black {
-  color: var(--text);
+p {
+  font-family: "Gilroy", sans-serif;
 }
+
+/* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
+.splide__pagination {
+  position: relative !important;
+  margin-top: 64px !important;
+  gap: 10px;
+}
+
+.splide__pagination__page {
+  height: 3px !important;
+  width: 40px !important;
+  border-radius: 0 !important;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--dark) !important;
+}
+
 .container {
   max-width: 1320px;
   padding: 0 16px;
   margin: 0 auto;
 }
+
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("../images/BG-header.jpg");
+  background-image: url("../images/BGAbout.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 836px;
+  height: 792px;
   position: relative;
   transition:
     opacity 1.5s ease,
@@ -84,6 +103,24 @@
   height: 15px;
   object-fit: contain;
 }
+/* Бургер-меню (по умолчанию скрыто) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text);
+  transition: 0.3s;
+}
 
 /* Dropdown меню */
 .dropdown {
@@ -108,6 +145,7 @@
 
 .mega-menu,
 .resources-menu {
+  height: 100vh;
   position: absolute;
   left: 0;
   width: 100%;
@@ -119,7 +157,6 @@
   z-index: 2;
   border-top: 1px solid #ddd;
   margin-top: 37px;
-  height: 100vh;
 }
 
 .mega-menu .container {
@@ -225,193 +262,6 @@
 .black-header,
 .wrapper-black {
   background: var(--dark);
-}
-/* --- СЕКЦИЯ КОНТАКТОВ (Основная верстка) --- */
-.main_contacts {
-  padding: 52px 0;
-}
-
-.contacts_category {
-  font-family: "Gilroy", sans-serif;
-
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text);
-  margin-bottom: 38px;
-}
-
-.contacts_title {
-  font-family: "EB Garamond", serif;
-  font-size: 60px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 32px;
-}
-
-.contacts_grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 100px;
-  margin-bottom: 100px;
-}
-
-/* Левая колонка: Инфо */
-.contacts_info {
-  font-family: "Gilroy", sans-serif;
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.info_block {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-gary);
-}
-.info_block a {
-  transition: 0.3s all;
-}
-
-.info_block p,
-.info_block a {
-  display: block;
-}
-
-.info_block a:hover {
-  color: var(--text);
-}
-
-.info_label {
-  color: var(--text);
-  margin-bottom: 5px;
-}
-
-/* Правая колонка: Форма */
-.contacts_form-wrap {
-  max-width: 660px;
-}
-
-.form_title {
-  font-family: "EB Garamond", serif;
-
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 32px;
-}
-
-.form_descr {
-  font-family: "Gilroy", sans-serif;
-
-  line-height: 1.7;
-  letter-spacing: 0.06em;
-  color: var(--text-gary);
-  margin-bottom: 64px;
-}
-
-.contacts_form {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-.form_group {
-  position: relative;
-}
-
-.form_input,
-.form_textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
-  padding: 12px 0;
-  color: var(--text);
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-.form_input:focus,
-.form_textarea:focus {
-  outline: none;
-  border-bottom-color: var(--text);
-}
-
-/* Placeholder тусклый */
-.form_input::placeholder,
-.form_textarea::placeholder {
-  color: var(--text);
-}
-
-.form_textarea {
-  height: 120px;
-  resize: none;
-}
-
-/* Нижняя часть формы: чекбокс и кнопка */
-.form_bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  gap: 12px;
-}
-
-/* Кастомный чекбокс */
-.form_checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 12px;
-  color: var(--text-gary);
-  cursor: pointer;
-  max-width: 400px;
-  line-height: 1.5;
-  font-family: "Gilroy", sans-serif;
-}
-
-.form_checkbox {
-  display: none;
-}
-
-.checkbox_custom {
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: block;
-  position: relative;
-  flex-shrink: 0;
-  font-family: "Gilroy", sans-serif;
-}
-
-/* Галочка при выборе */
-.form_checkbox:checked + .checkbox_custom::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 6px;
-  width: 4px;
-  height: 8px;
-  border: solid var(--text);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-/* Разделительная линия внизу */
-.contacts_divider {
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-top: 100px;
-}
-.btn-white {
-  padding: 12px 32px;
-  background: var(--text);
-  color: var(--bg-btn);
-  transition: 0.3s all;
-  font-family: "Gilroy", sans-serif;
 }
 
 /* ===== Footer ===== */
@@ -525,32 +375,39 @@
 .footer_socials a:hover img {
   opacity: 0.7;
 }
-
-/* ===== Адаптивные стили ===== */
-/* Бургер-меню (по умолчанию скрыто) */
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.burger span {
-  display: block;
-  width: 25px;
-  height: 2px;
-  background-color: var(--text);
-  transition: 0.3s;
-}
-
 .footer_col-info-mob {
   display: none;
 }
-
-/* --- АДАПТИВНОСТЬ --- */
+.btn-white {
+  padding: 12px 32px;
+  background: var(--text);
+  color: var(--bg-btn);
+  transition: 0.3s all;
+  font-family: "Gilroy", sans-serif;
+}
+.error-bg {
+  background-image: url("../images/404-1.png");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+.error-bg .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 50px;
+}
+.error-text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 44px;
+  color: var(--text-grey);
+}
+/* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   .burger {
     display: flex;
@@ -658,33 +515,19 @@
   .header_wrapp {
     height: 393px;
   }
-  .contacts_grid {
-    gap: 32px;
-    margin-bottom: 0;
+
+  .text-main {
+    top: 140px;
   }
 
-  .form_bottom {
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
+  .text-main-title {
+    font-size: 48px;
   }
-  .form_btn {
-    width: 100%;
+
+  .text-title {
+    margin-bottom: 72px;
   }
-  .contacts_category {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-  .contacts_title {
-    font-size: 32px;
-    margin-bottom: 54px;
-  }
-  .form_title {
-    font-size: 24px;
-  }
-  .form_checkbox-label {
-    font-size: 12px;
-  }
+
   .footer_logo {
     height: 55px;
   }
@@ -714,14 +557,33 @@
     width: 12px;
     height: 12px;
   }
+  .error-bg {
+    height: 60vh;
+  }
+  .error-text {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
 }
+
+/* Мобильные устройства (до 530px) */
 @media (max-width: 530px) {
+  .header_wrapp {
+    height: 100vh;
+  }
   .header_logo-link {
     height: 40px;
   }
-  .contacts_grid {
-    grid-template-columns: 1fr;
+
+  .text-main {
+    top: 170px;
   }
+
+  .text-main-title {
+    font-size: 30px;
+    width: 300px;
+  }
+
   .footer_top {
     flex-direction: column;
     align-items: center;
@@ -768,7 +630,18 @@
     width: 24px;
     height: 24px;
   }
+  .text-item {
+    padding-left: 0;
+  }
+  .error-bg {
+    height: 400px;
+  }
+  .error-text {
+    font-size: 16px;
+    text-align: center;
+  }
 }
+
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     background-color: #ffffff;
@@ -783,9 +656,9 @@
     background: var(--bg-btn);
     color: var(--text);
   }
-  .btn-outline:hover {
-    background: var(--bg-btn);
-    color: var(--text);
+  .tab-link:hover {
+    border-color: var(--dark);
+    color: var(--dark);
   }
 
   .footer_list a:hover,

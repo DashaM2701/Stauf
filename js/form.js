@@ -1,60 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('.contacts_form');
+    const inquiryForm = document.querySelector('.inquiry-form');
+    const submitBtn = inquiryForm.querySelector('.submit-btn');
 
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', function(e) {
+  
+    inquiryForm.addEventListener('submit', (e) => {
         e.preventDefault(); 
 
-        // Собираем данные формы
-        const formData = new FormData(this);
+       
+        const formData = new FormData(inquiryForm);
         const data = Object.fromEntries(formData.entries());
-
         
-        const privacyChecked = this.querySelector('input[name="privacy"]').checked;
-        
-        if (!privacyChecked) {
-            alert('Please consent to the processing of your data.');
+       
+        const consentCheckbox = inquiryForm.querySelector('input[type="checkbox"]');
+        if (!consentCheckbox.checked) {
+            alert('Please accept the privacy policy to continue.');
             return;
         }
 
-        // Имитация отправки данных на сервер
-        console.log('Sending data...', data);
-
-        // Визуальный фидбек пользователю
-        const submitBtn = this.querySelector('.form_btn');
-        const originalText = submitBtn.textContent;
-
+      
+        const originalBtnText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
+        submitBtn.style.opacity = '0.7';
         submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.5';
 
-        // Имитируем задержку сети
+        //  Имитация AJAX-запроса 
         setTimeout(() => {
-            alert('Thank you! Your message has been sent.');
-            
-           
-            this.reset();
-            
-           
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = '1';
-        }, 1500);
-    });
+            console.log('Form submitted successfully:', data);
 
-    
-    const inputs = contactForm.querySelectorAll('.form_input, .form_textarea');
-    
-    inputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.classList.add('is-focused');
-        });
-        
-        input.addEventListener('blur', () => {
-            if (input.value === '') {
-                input.parentElement.classList.remove('is-focused');
-            }
-        });
+            
+            submitBtn.textContent = 'Sent';
+            submitBtn.style.backgroundColor = '#4CAF50';
+            submitBtn.style.color = '#fff';
+
+            // Очистка формы через 2 секунды
+            setTimeout(() => {
+                inquiryForm.reset();
+                submitBtn.textContent = originalBtnText;
+                submitBtn.style = ''; 
+                submitBtn.disabled = false;
+            }, 2000);
+
+        }, 1500);
     });
 });

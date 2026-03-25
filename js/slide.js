@@ -82,5 +82,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }, ".arrow-prev-c",
   ".arrow-next-c"
 );
+ initCustomSlider("#splide-news", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination:false,
+    breakpoints: {
+   
+      1040:{perPage: 2, },
+      530:{perPage: 1, }
+
+   
+
+    },
+  }, ".arrow-prev-c",
+  ".arrow-next-c"
+);
 
 });

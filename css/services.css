@@ -9,6 +9,9 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
+p {
+  font-family: "Gilroy", sans-serif;
+}
 
 /* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
 .splide__pagination {
@@ -35,7 +38,7 @@
 
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("../images/BGmanufacture.jpg");
+  background-image: url("../images/BGAbout.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -274,7 +277,6 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-family: "EB Garamond", serif;
-  
 }
 .btn-outline:active {
   background: var(--bg-btn);
@@ -286,419 +288,178 @@
   color: var(--bg-btn);
   transition: 0.3s all;
 }
-.text-main-subtitle{
+.text-main-subtitle {
   font-family: "Gilroy", sans-serif;
-font-size: 24px;
+  font-size: 24px;
   letter-spacing: 0.06em;
   margin-bottom: 18px;
   text-transform: uppercase;
   color: var(--text);
-
-}
-.luxury-page {
-  padding: 150px 0;
 }
 
-/* Стили цитаты */
-.quote-section {
-  position: relative;
-  text-align: center;
-  margin-bottom: 100px;
-  
+.services-page {
+  padding-top: 28px;
+  font-family: "Gilroy", sans-serif;
+
+  color: var(--text-grey-dark);
 }
-
-
-.quote-section::before {
-  content: '“';
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "EB Garamond", serif;
-  
-  font-size: 120px;
-  color: #f0f0f0;
-  z-index: -1;
+.services-header {
+  margin-bottom: 75px;
 }
-
-.quote-text {
-  font-family: "EB Garamond", serif;
-  
-  font-style: italic;
-  font-size: 32px;
-  color:var(--dark);
-  max-width: 1090px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-.philosophy__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center; 
-  gap: 48px;
-}
-
-.philosophy__image {
-  height: 100%;
-}
-
-.philosophy__image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.philosophy__content {
-  padding: 87px 0;
-}
-
-
-.philosophy__title {
-  font-family: "EB Garamond", serif;
-  
-  font-size: 32px;
-
- letter-spacing: 0.06em;
-  margin-bottom: 112px;
+.services-header .subtitle {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: var(--dark);
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
-.philosophy__description p {
-  font-family: "Gilroy", sans-serif;
-  
+.main-title {
+  font-size: 48px;
+  letter-spacing: 8px;
+  letter-spacing: 0.18em;
+  color: var(--dark);
 
-  color: var(--text-grey-dark);
-  
-  text-align: justify;
+  font-family: "EB Garamond", serif;
 }
 
-/* Repository секция (видео-превью) */
-.repository {
-  padding-bottom: 150px;
-}
-
-.repository-box-head {
+/* Вкладки */
+.services-tabs {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+
   margin-bottom: 64px;
 }
 
-.repository-box-head-title {
-  font-size: 32px;
-  font-family: "EB Garamond", serif;
-}
-
-.btn-outline {
-  padding: 12px 25px;
-  border: 1px solid var(--bg-btn);
-  color: var(--bg-btn);
-  transition: 0.3s all;
-}
-
-.repository-btn-mob {
-  display: none;
-}
-
-.video-preview-card {
-  position: relative;
-  display: block;
- 
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background-color: #000;
-  transition: 0.3s all;
-}
-
-.card_img-wrap {
-  position: relative;
-  width: 100%;
-  height: 544px;
-  overflow: hidden;
-  background-color: #000;
-  transition: 0.3s all;
-
-}
-
-.card_img-wrap.card_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-out;
-  transform-origin: center center;
-
-}
-
-.card_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-
-.card_content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  z-index: 10;
-}
-
-.card_insta-icon {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_insta-icon svg {
-  max-width: 100%;
-  height: auto;
-}
-
-.card_play-btn {
-  height: 80px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.card_play-btn svg {
-  width: 100%;
-  height: auto;
-}
-
-.card_play-btn:hover {
-  opacity: 1;
-}
-.splide__slide img {
-  width: 100%;
-  height: 100%;
-}
-
-.machines-section {
-  padding-bottom: 150px;
-  
- 
-}
-
-.machines-container {
- 
-  display: grid;
-
-  grid-template-columns: 1.2fr 1fr; 
-  gap: 48px;
-  align-items: center;
-}
-
-.machines-title {
-  font-family: "EB Garamond", serif;
-  
-  font-size: 32px;
-  
-  
-  letter-spacing: 0.06em;
-  margin-bottom: 112px;
-  text-transform: uppercase;
-}
-
-
-.machines-description {
-  letter-spacing: 0.06em;
+.tab-link {
   font-family: "Gilroy", sans-serif;
-  
-  
-  color: var(--text-grey-dark);
- 
+  font-size: 20px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  letter-spacing: 2px;
+  color: #999;
+  border-bottom: 1px solid var(--text-grey);
+  transition: 0.3s all;
 }
 
-.machines-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
+.tab-link.active {
+  color: #000;
+  border-bottom: 2px solid #000;
 }
 
-.machines-list li {
-  margin-bottom: 5px;
+/* Контент */
+.warranty-content {
+  max-width: 1096px;
+  margin: 0 auto;
 }
 
-.machines-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.watch-illustration {
+  text-align: center;
+  margin-bottom: 50px;
+  height: 315px;
+}
+
+.watch-illustration img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  object-fit: contain;
+}
+.section-subtitle {
+  font-family: "EB Garamond", serif;
+  color: var(--dark);
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  margin-bottom: 24px;
+}
+.text-item {
+  display: flex;
+  margin-bottom: 30px;
+  font-family: "Gilroy", sans-serif;
+
+  line-height: 1.6;
+  font-size: 14px;
+  padding-left: 48px;
+}
+
+.item-number {
+  font-weight: bold;
+  margin-right: 20px;
+  min-width: 30px;
+  color: var(--dark);
+}
+.text-block-item {
+  margin-bottom: 64px;
+}
+
+.inquiry-footer {
+  background-color: var(--dark);
+  color: var(--text);
+  padding: 120px 0;
+}
+
+.footer-container {
+  display: flex;
+
+  gap: 64px;
+  justify-items: end;
+}
+.inquiry-info {
+  max-width: 50%;
+}
+.inquiry-info h3 {
+  font-family: "EB Garamond", serif;
+
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  margin-bottom: 64px;
+}
+
+.inquiry-info p {
+  font-family: "Gilroy", sans-serif;
+  letter-spacing: 0.06em;
+
+  color: var(--text-grey);
+}
+
+/* Форма */
+.inquiry-form {
+  width: 50%;
+}
+.inquiry-form .input-group {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--text-grey-dark);
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  font-family: "Gilroy", sans-serif;
+
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 10px 0;
+  outline: none;
+}
+.inquiry-form textarea {
+  resize: none;
+}
+.checkbox-container {
+  display: flex;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
   gap: 24px;
 }
-
-.machine-img {
-  width: 100%;
-  height: 500px;
-  aspect-ratio: 2 / 3; 
-  overflow: hidden;
-}
-
-.machine-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-hero {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: var(--text);
-  position: relative;
- 
-}
-.video-hero .container{
-    width: 100%;
-}
-
-.video-hero__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.video-hero__bg img, 
-.video-hero__bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Затемнение фона */
-.video-hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  z-index: 2;
-}
-
-
-.video-hero__content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
- 
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.video-hero__title {
-  font-family: "EB Garamond", serif;
-
-  font-size: 32px;
-  
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 112px;
-}
-
-.video-hero__subtitle {
-  font-family: "Gilroy", sans-serif;
-  
- 
-  letter-spacing: 0.06em;
-  color: var(--text-grey);
-  
-  max-width: 350px;
-}
-
-/* Кнопка Play */
-.video-hero__play-btn {
-position: absolute;
-left: 50%;
-transition: 0.3s all;
-cursor: pointer;
-}
-
-
-
-.video-hero__play-btn:hover {
-  transform: scale(1.1);
-}
-
-.gallery {
-
-  padding-bottom: 150px;
- 
-}
-
-.gallery__title {
-  font-family: "EB Garamond", serif;
-
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
- 
-  
-  margin-bottom: 64px;
-}
-
-.gallery__grid {
-  display: grid;
-  
-  grid-template-columns: repeat(4, 1fr);
-
-  grid-auto-rows: 180px; 
-  gap: 15px;
-}
-
-.gallery__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-.item-1 { grid-column: 1; grid-row: 1; }
-.item-2 { grid-column: 1; grid-row: 2; }
-
-
-.item-3 { 
-  grid-column: 2 / 4; 
-  grid-row: 1 / 3; 
-}
-
-.item-4 { grid-column: 4; grid-row: 1 / 3; }
-
-
-.item-5 { grid-column: 1 / 3; grid-row: 3; }
-.item-6 { grid-column: 3; grid-row: 3; }
-.item-7 { grid-column: 4; grid-row: 3; }
 
 /* ===== Footer ===== */
 .footer {
@@ -814,6 +575,53 @@ cursor: pointer;
 .footer_col-info-mob {
   display: none;
 }
+.btn-white {
+  padding: 12px 32px;
+  background: var(--text);
+  color: var(--bg-btn);
+  transition: 0.3s all;
+  font-family: "Gilroy", sans-serif;
+}
+
+/* Кастомный чекбокс */
+.form_checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-gary);
+  cursor: pointer;
+  max-width: 400px;
+  line-height: 1.5;
+  font-family: "Gilroy", sans-serif;
+}
+
+.form_checkbox {
+  display: none;
+}
+
+.checkbox_custom {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  font-family: "Gilroy", sans-serif;
+}
+
+/* Галочка при выборе */
+.form_checkbox:checked + .checkbox_custom::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--text);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   .burger {
@@ -826,7 +634,7 @@ cursor: pointer;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #0A0D0E;
+    background: #0a0d0e;
     flex-direction: column;
     padding: 130px 20px;
     transition: 0.4s;
@@ -935,87 +743,6 @@ cursor: pointer;
     margin-bottom: 72px;
   }
 
-
- 
-
-
-
- 
-
-  .repository-box-head {
-    margin-bottom: 38px;
-  }
-
-  .repository-box-head-title {
-    font-size: 24px;
-  }
-
-  .btn-outline {
-    font-size: 14px;
-  }
-
-  .repository {
-    padding-bottom: 54px;
-  }
-
-  .splide__pagination__page {
-    width: 21px !important;
-    height: 2px !important;
-  }
-
-  .splide__pagination {
-    margin-top: 32px !important;
-  }
-
-  .card_img-wrap {
-    height: 250px;
-  }
-  .machines-gallery{
-    grid-template-columns: 1fr;
-  }
-  .machine-img{
-    height: 270px;
-  }
-  .luxury-page{
-    padding: 50px 0;
-  }
-  .quote-text{
-    width: 100%;
-    font-size: 24px;
-  }
-  .quote-section{
-    margin-bottom: 32px;
-  }
-  .philosophy__content{
-    padding: 42px 0;
-
-  }
-  .philosophy__image{
-    order: 1;
-    height: 470px;
-  }
-  .philosophy__title, .machines-title{
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-  .philosophy__description, .machines-list{
-    font-size: 14px;
-  }
-  .video-hero__title{
-    font-size: 24px;
-  }
-  .video-hero{
-    height: 390px;
-  }
-  .gallery{
-    padding-bottom: 50px;
-  }
-  .machines-section{
-    padding-bottom: 56px;
-  }
-  .philosophy__container{
-    gap: 24px;
-  }
   .footer_logo {
     height: 55px;
   }
@@ -1045,7 +772,45 @@ cursor: pointer;
     width: 12px;
     height: 12px;
   }
-
+  .services-header .subtitle {
+    font-size: 20px;
+  }
+  .main-title {
+    font-size: 32px;
+  }
+  .services-header {
+    margin-bottom: 32px;
+  }
+  .tab-link {
+    font-size: 18px;
+  }
+  .section-subtitle,
+  .inquiry-info h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .inquiry-footer {
+    padding: 70px 0;
+  }
+  .inquiry-form {
+    max-width: 400px;
+  }
+  .footer-container {
+    gap: 32px;
+    align-items: center;
+  }
+}
+@media (max-width: 570px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .inquiry-info,
+  .inquiry-form {
+    max-width: 100%;
+  }
+  .inquiry-form {
+    width: 100%;
+  }
 }
 
 /* Мобильные устройства (до 530px) */
@@ -1053,13 +818,12 @@ cursor: pointer;
   .header_wrapp {
     height: 100vh;
   }
-  .header_logo-link{
+  .header_logo-link {
     height: 40px;
   }
 
   .text-main {
     top: 170px;
-   
   }
 
   .text-main-title {
@@ -1067,50 +831,25 @@ cursor: pointer;
     width: 300px;
   }
 
-
-  .card_play-btn {
-    height: 64px;
+  .watch-illustration {
+    height: 200px;
+  }
+  .section-subtitle {
+    font-size: 20px;
+  }
+  .main-title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 16px;
   }
 
-  .repository-box-head .btn-outline {
-    display: none;
-  }
-
-  .repository-btn-mob {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-  }
-  .philosophy__container{
-    grid-template-columns: 1fr;
-  }
-.machines-container{
-    grid-template-columns: 1fr;
-}
-
-.machines-gallery{
-    grid-template-columns: 1fr 1fr;
-}
-.video-hero{
-    height: 544px;
-}
-.video-hero__text{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-}
   .footer_top {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-.gallery__title{
-    font-size: 24px;
-}
-.gallery__title{
-    margin-bottom: 32px;
-}
+
   .footer_col.footer_col-info {
     display: none;
   }
@@ -1151,108 +890,28 @@ cursor: pointer;
     width: 24px;
     height: 24px;
   }
-  .gallery__grid {
-    /* На мобилке делаем 2 колонки */
-    grid-template-columns: 1fr 1fr; 
-    grid-auto-rows: minmax(100px, auto); 
-    gap: 10px;
-  }
-
-  .gallery__item img {
-    height: 100%; /* Возвращаем заполнение ячейки */
-  }
-
-  /* 1. Первые две картинки в один ряд */
-  .item-1 { grid-column: 1; grid-row: 1; }
-  .item-2 { grid-column: 2; grid-row: 1; }
-
-  /* 2. Большая центральная картинка на весь ряд */
-  .item-3 { 
-    grid-column: 1 / 3; 
-    grid-row: 2; 
-    aspect-ratio: 1 / 1; /* Чтобы была квадратной/крупной */
-  }
-
-  /* 3. Левая высокая картинка (циферблат крупно) */
-  .item-4 { 
-    grid-column: 1; 
-    grid-row: 3 / 5; /* Занимает 2 строки в высоту */
-  }
-
-  /* 4. Маленькие картинки справа от высокой */
-  .item-6 { grid-column: 2; grid-row: 3; }
-  .item-7 { grid-column: 2; grid-row: 4; }
-
-  /* 5. Нижняя широкая картинка (стрелка) */
-  .item-5 { 
-    grid-column: 1 / 3; 
-    grid-row: 5; 
-  }
-  
-
- 
-}
-@media(max-width:380px){
-   .card_img-wrap {
-    height: 544px;
+  .text-item {
+    padding-left: 0;
   }
 }
 
-
-
-
-
-/* ===== Hover-эффекты только для устройств с мышью (десктоп) ===== */
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     background-color: #ffffff;
     border: 1px solid var(--bg-btn);
     color: var(--bg-btn);
   }
+  .info_block a:hover {
+    opacity: 0.8;
+  }
 
   .btn-white:hover {
     background: var(--bg-btn);
     color: var(--text);
   }
-  .btn-outline:hover{
-  background: var(--bg-btn);
-  color: var(--text);
-}
-
-
-
-  .card-container:hover .watch-block.active:not(:hover) {
-    transform: scale(1);
-    flex-grow: 1.2;
-    z-index: 1;
-  }
-
-  .card-container:hover .watch-block.active:not(:hover) .text-content {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-  }
-
-  .card-container:hover .watch-block:not(.active):not(:hover) {
-    flex-grow: 1.2;
-    transform: scale(1);
-  }
-
-  .watch-block:last-child:hover {
-    transform: scale(var(--watch-scale-factor)) translateX(-120px);
-    z-index: 10;
-  }
-
-  .card-container:hover .watch-block:not(:hover) {
-    transform: scale(0.95);
-  }
-
-  .video-preview-card:hover .card_img {
-    transform: scale(1.15);
-  }
-
-  .video-preview-card:hover .card_overlay {
-    opacity: 1;
+  .tab-link:hover {
+    border-color: var(--dark);
+    color: var(--dark);
   }
 
   .footer_list a:hover,

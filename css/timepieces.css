@@ -227,6 +227,7 @@
   right: 0;
   object-fit: cover;
   transition: 0.3s all;
+  width: 100%;
 }
 
 .card-title {
