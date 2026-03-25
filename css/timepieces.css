@@ -35,7 +35,7 @@
 
 /* ===== Header ===== */
 .header_wrapp {
-  background-image: url("images/BGTimepieces.jpg");
+  background-image: url("../images/BGTimepieces.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
