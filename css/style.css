@@ -276,49 +276,254 @@
   font-family: "EB Garamond", serif;
   width: 522px;
 }
-
-/* Showcase секция (часы) */
 .showcase-section {
+
   padding: 70px 0;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
-  overflow: hidden;
+
 }
+
+
 
 .card-container {
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   gap: 24px;
+
   width: 100%;
+
 }
+
+
 
 .watch-block {
+
   display: flex;
+
   align-items: center;
+
   gap: 20px;
+
   flex-grow: 1;
-  transition: transform 0.4s ease, flex-grow 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+
+
+
+  transition:
+
+    transform 0.4s ease,
+
+    flex-grow 0.4s ease,
+
+    opacity 0.4s ease,
+
+    z-index 0.4s ease;
+
 }
+
+
 
 .watch-image-wrap {
-  flex-shrink: 0;
+
+  flex-shrink:0 ;
+
   max-width: 250px;
+
   display: flex;
+
   justify-content: center;
+
 }
+
+
 
 .watch-img {
+
   max-width: 100%;
+
   height: auto;
+
   object-fit: contain;
+
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+
   transform: translateX(0);
+
 }
 
+
+
 .text-content {
-  width: 300px;
+
+ 
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+
+
+  transition:
+
+    opacity 0.4s ease,
+
+    visibility 0.4s ease,
+
+    transform 0.5s ease,
+
+    color 0.4s ease;
+
+  will-change: opacity, transform;
+
+}
+
+
+
+.text-title {
+
+  font-size: 20px;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  color: var(--text-hover);
+
+  margin-bottom: 100px;
+
+  font-family: "Gilroy", sans-serif;
+
+}
+
+
+
+.text-descr {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: var(--text-primary);
+
+  margin-bottom: 30px;
+
+  font-family: "Gilroy", sans-serif;
+
+}
+
+
+
+.btn {
+
+  display: inline-block;
+
+  padding: 12px 30px;
+
+  background-color: var(--bg-btn);
+
+  color: var(--text);
+
+  text-transform: uppercase;
+
+  font-size: 12px;
+
+  letter-spacing: 0.1em;
+
+  transition: background 0.3s ease;
+
+  font-family: "Gilroy", sans-serif;
+
+}
+
+
+
+.btn:hover {
+
+  background-color: #ffffff;
+
+
+
+  border: 1px solid var(--bg-btn);
+
+  color: var(--bg-btn);
+
+}
+
+
+
+.watch-block.active,
+
+.watch-block:hover {
+
+transform: scale(var(--watch-scale-factor)) translateX(-100px);
+
+z-index: 1;
+
+}
+
+
+
+.watch-block.active .text-content,
+
+.watch-block:hover .text-content {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
+  width: 400px;
+
+}
+
+
+
+.card-container:hover .watch-block.active:not(:hover) {
+
+  transform: scale(1);
+
+  flex-grow: 1.2;
+
+ 
+
+  z-index: 1;
+
+}
+
+
+
+.card-container:hover .watch-block.active:not(:hover) .text-content {
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+}
+
+
+
+.card-container:hover .watch-block:not(.active):not(:hover) {
+
+  flex-grow: 1.2;
+
+  transform: scale(1);
+}
+.text-content {
+  width: 400px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -357,6 +562,8 @@
 
 .watch-block.active {
   transform: translateX(100px);
+
+
 }
 .btn-outline:active{
   background: var(--bg-btn);
@@ -1256,12 +1463,13 @@
   .technical-left-col-img.mob-img {
     display: block;
     height: 100px;
-    width: 120px;
+    width: 100%;
     object-fit: cover;
   }
 
   .technical-right-col {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     justify-content: space-between;
     align-items: flex-end;

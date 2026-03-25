@@ -4,8 +4,8 @@
 const hero = document.querySelector('.header_wrapp');
 const title = document.querySelector('.text-main-title');
 const slides = [
-  { img: '../images/BG-header.jpg', text: 'Engineering over decoration' },
-  { img: '../images/bg2.jpg', text: 'Explained watchmaking' }
+  { img: 'images/BG-header.jpg', text: 'Engineering over decoration' },
+  { img: './images/bg2.jpg', text: 'Explained watchmaking' }
 ];
 
 let index = 0;
