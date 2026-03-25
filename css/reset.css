@@ -1,0 +1,74 @@
+
+
+/* Убираем отступы и поля у всех элементов */
+html, body { 
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем стили списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Убираем стили у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем стили у заголовков */
+h1, h2, h3, h4, h5, h6 {
+
+  font-weight: normal;
+}
+
+/* Убираем курсив у тега address и других */
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* Уравниваем поведение блоков */
+article, aside, footer, header, nav, section, main, figure, figcaption {
+  display: block;
+}
+
+/* Убираем рамки у изображений и устанавливаем адаптивность */
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Сброс инпутов и кнопок */
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Убираем выделение при нажатии (можно убрать, если нужно) */
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* Сброс таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Установка базовых стилей body */
+body {
+
+  background-color: #fff;
+  color: #000;
+}

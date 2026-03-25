@@ -1,0 +1,812 @@
+/* ===== Импорт шрифтов и CSS-переменные ===== */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --text: #fff;
+  --text-grey: #babbb7;
+  --text-grey-dark: #767a7e;
+  --bg-btn: #24262a;
+  --dark: #0a0d0e;
+  --watch-scale-factor: 1.25;
+}
+.wrapper-black {
+  color: var(--text);
+}
+.container {
+  max-width: 1320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+/* ===== Header ===== */
+.header_wrapp {
+  background-image: url("/images/BG-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 836px;
+  position: relative;
+  transition:
+    opacity 1.5s ease,
+    background-image 1s ease-in-out;
+}
+
+.header_wrapp.fade {
+  opacity: 0;
+}
+
+.header_bg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.header_logo-link {
+  height: 68px;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.header_nav-list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.header_nav-list-item-link {
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+}
+
+.header_lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+}
+
+.header_lang-img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+/* Dropdown меню */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: var(--text);
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  font-family: "Gilroy", sans-serif;
+}
+
+.dropbtn-arrow {
+  transition: 0.3s all;
+}
+
+.dropbtn-arrow.active {
+  transform: rotate(180deg);
+}
+
+.mega-menu,
+.resources-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 2;
+  border-top: 1px solid #ddd;
+  margin-top: 37px;
+  height: 100vh;
+}
+
+.mega-menu .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.mega-menu.active,
+.resources-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container.mega-menu-desktop {
+  display: flex;
+  gap: 40px;
+}
+
+.container.mega-menu-desktop .card {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Мобильное подменю (появляется в адаптиве) */
+.mobile-subnav {
+  display: none;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.mobile-subnav li {
+  margin-bottom: 15px;
+}
+
+.mobile-subnav a {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+/* Карточки внутри мегаменю */
+.card {
+  width: 100%;
+  color: var(--text);
+  position: relative;
+  height: 400px;
+}
+
+.card_img-wrapp {
+  position: relative;
+  padding: 24px;
+}
+
+.card_img-wrapp p {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--text-grey);
+  z-index: 1;
+  font-family: "Gilroy", sans-serif;
+}
+
+.card_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  transition: 0.3s all;
+}
+
+.card-title {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Gilroy", sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #0a0d0e;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.black-header,
+.wrapper-black {
+  background: var(--dark);
+}
+/* ==========================================================================
+   СЕКЦИЯ PRESS AREA
+   ========================================================================== */
+.press_page {
+  padding: 50px 0;
+}
+
+.press_category {
+  font-family: "Gilroy", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(---dark);
+  margin-bottom: 18px;
+}
+
+.press_title {
+  font-family: "EB Garamond", serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 72px;
+}
+
+/* --- ТАБЫ --- */
+.press_tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 74px;
+}
+
+.tab_btn {
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-family: "Gilroy", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-grey);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.tab_btn.active {
+  color: var(--text-grey-dark);
+}
+
+.tab_btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-grey-dark);
+}
+
+/* --- СЕТКА ВИДЕО (GRID) --- */
+.video_grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.video_card {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video_poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.video_card:hover .video_poster {
+  transform: scale(1.05);
+}
+
+/* Логика Grid: Большие карточки (первые две) */
+.video_card.big {
+  grid-column: span 3;
+  height: 400px;
+}
+
+.video_card.small {
+  grid-column: span 2;
+  height: 300px;
+}
+
+.card_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  opacity: 1;
+}
+
+.video_card-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+.play_btn {
+  align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  transition: opacity 0.3s ease;
+}
+
+.play_btn:hover {
+  opacity: 0.8;
+}
+
+.video_meta {
+  font-family: "Gilroy", sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+}
+
+/* --- LOAD MORE --- */
+.load_more-wrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.load_more-text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-grey-dark);
+}
+
+.load_more-btn {
+  background: none;
+
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load_more-btn:hover {
+  scale: 1.1;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--dark);
+  padding: 80px 0 40px;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 120px;
+}
+
+.footer_col {
+  flex: 1;
+}
+
+.footer_col-info {
+  flex: 1.5;
+}
+
+.footer_logo {
+  height: 103px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer_text {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey);
+  line-height: 1.6;
+  max-width: 240px;
+}
+
+.footer_title {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.footer_list li {
+  margin-bottom: 4px;
+}
+
+.footer_list a,
+.footer_contact-info p,
+.footer_contact-info a {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey-dark);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer_email {
+  margin-top: 20px;
+  color: var(--text-grey);
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_bottom {
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer_copy {
+  color: rgba(186, 187, 183, 0.5);
+  font-size: 12px;
+  flex: 1;
+}
+
+.footer_legal {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+  justify-content: center;
+}
+
+.footer_legal a {
+  color: rgba(186, 187, 183, 0.5);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.footer_socials img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.footer_socials a:hover img {
+  opacity: 0.7;
+}
+
+/* ===== Адаптивные стили ===== */
+/* Бургер-меню (по умолчанию скрыто) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text);
+  transition: 0.3s;
+}
+
+.footer_col-info-mob {
+  display: none;
+}
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .header_nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #0a0d0e;
+    flex-direction: column;
+    padding: 130px 20px;
+    transition: 0.4s;
+    align-items: flex-start;
+  }
+
+  .header_nav {
+    align-items: flex-start;
+  }
+
+  .card_img-wrapp {
+    display: none;
+  }
+
+  .header_logo,
+  .header_lang {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mega-menu-desktop {
+    display: none !important;
+  }
+
+  .mobile-subnav.active {
+    display: block;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    display: none !important;
+  }
+
+  .container.mega-menu-desktop {
+    gap: 40px;
+  }
+
+  .dropbtn {
+    font-size: 24px;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+  }
+
+  .header_nav-list.open {
+    right: 0;
+  }
+
+  .header_nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .header_nav-list-item-link,
+  .dropbtn {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: none;
+    padding: 20px 0 0 20px;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .mega-menu.active,
+  .resources-menu.active {
+    display: block;
+  }
+
+  .burger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  .press_title {
+    font-size: 36px;
+  }
+
+  .video_card.big,
+  .video_card.small {
+    /* На планшетах делаем всё в 2 колонки */
+    grid-column: span 3;
+    height: 300px;
+  }
+  .press_category {
+    font-size: 20px;
+  }
+  .press_title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  .press_tabs {
+    margin-bottom: 54px;
+  }
+  .video_grid {
+    margin-bottom: 32px;
+  }
+  .press_tabs {
+    overflow-x: auto;
+    gap: 24px;
+  }
+  .tab_btn {
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .footer_logo {
+    height: 55px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 8.5px;
+  }
+
+  .footer {
+    padding: 48px 0;
+  }
+
+  .footer_top {
+    margin-bottom: 69px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 7.5px;
+  }
+
+  .footer_socials img {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (max-width: 530px) {
+  .header_logo-link {
+    height: 40px;
+  }
+  .press_category {
+    font-size: 18px;
+  }
+  .press_title {
+    font-size: 28px;
+  }
+  .tab_btn {
+    font-size: 16px;
+  }
+  .video_grid {
+    gap: 16px;
+  }
+  .card_overlay {
+    padding: 16px;
+  }
+  .video_grid {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+  }
+
+  .video_card:first-child {
+    grid-column: span 6;
+    height: 250px;
+  }
+
+  .video_card {
+    grid-column: span 3; 
+    height: 300px; 
+  }
+
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_col.footer_col-info {
+    display: none;
+  }
+
+  .footer_col.footer_col-info.footer_col-info-mob {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 16px;
+  }
+
+  .footer_title {
+    margin-bottom: 16px;
+  }
+
+  .footer_top {
+    margin-bottom: 56px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 14px;
+  }
+
+  .footer_socials img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 380px) {
+  .video_card:first-child,
+  .video_card {
+    grid-column: span 6 !important;
+    height: 250px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .tab_btn:hover {
+    color: var(---dark);
+  }
+  .tab_btn:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-grey-dark);
+  }
+  .footer_list a:hover,
+  .footer_contact-info a:hover {
+    color: var(--text);
+  }
+}
