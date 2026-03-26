@@ -242,7 +242,7 @@
   width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", sans-serif; 
 }
 
 .overlay {
