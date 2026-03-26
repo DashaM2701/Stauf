@@ -72,3 +72,23 @@ body {
   background-color: #fff;
   color: #000;
 }
+/* ширина скролла */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* дорожка */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* сам скролл */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+}
+
+/* при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}

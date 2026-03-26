@@ -38,67 +38,136 @@ document.addEventListener("DOMContentLoaded", function () {
     perMove: 1,
     gap: "1.5rem",
     arrows: false,
-    pagination:true,
+    pagination: true,
     breakpoints: {
-      630:{perPage: 3 },
+      630: { perPage: 3 },
       450: { perPage: 2 },
       380: { perPage: 1 },
-
     },
   });
-     initCustomSlider("#splide-featured", {
-    type: "loop",
+  initCustomSlider(
+    "#splide-featured",
+    {
+      type: "loop",
+      perPage: 3,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        768: { perPage: 2 },
+        530: { perPage: 1, type: "slide" },
+      },
+    },
+    ".arrow-prev",
+    ".arrow-next",
+  );
+  initCustomSlider(
+    "#splide-commintment",
+    {
+      type: "loop",
+      perPage: 3,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        1040: { perPage: 2 },
+        530: { perPage: 1, pagination: true },
+      },
+    },
+    ".arrow-prev-c",
+    ".arrow-next-c",
+  );
+  initCustomSlider(
+    "#splide-news",
+    {
+      type: "loop",
+      perPage: 3,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        1040: { perPage: 2 },
+        530: { perPage: 1 },
+      },
+    },
+    ".arrow-prev-c",
+    ".arrow-next-c",
+  );
+  initCustomSlider("#splide-dial", {
     perPage: 3,
     perMove: 1,
     gap: "1.5rem",
-    arrows: false,
-    pagination:false,
+    arrows: true,
+    pagination: false,
     breakpoints: {
-   
-      768:{perPage: 2 },
-      530:{perPage: 1, type: "slide"},
-
-   
-
+      768: { perPage: 2 },
+      
     },
-  }, ".arrow-prev",
-  ".arrow-next"
-);
-   initCustomSlider("#splide-commintment", {
-    type: "loop",
+  });
+  initCustomSlider("#splide-clasp", {
     perPage: 3,
     perMove: 1,
     gap: "1.5rem",
-    arrows: false,
-    pagination:false,
+    arrows: true,
+    pagination: false,
     breakpoints: {
-   
-      1040:{perPage: 2, },
-      530:{perPage: 1, pagination:true}
-
-   
-
+      768: { perPage: 2 },
+      530: { perPage: 1 },
     },
-  }, ".arrow-prev-c",
-  ".arrow-next-c"
-);
- initCustomSlider("#splide-news", {
-    type: "loop",
+  });
+  initCustomSlider("#splide-moment", {
     perPage: 3,
     perMove: 1,
     gap: "1.5rem",
-    arrows: false,
-    pagination:false,
+    arrows: true,
+    pagination: false,
     breakpoints: {
-   
-      1040:{perPage: 2, },
-      530:{perPage: 1, }
-
-   
-
+      768: { perPage: 2 },
+      530: { perPage: 1 },
     },
-  }, ".arrow-prev-c",
-  ".arrow-next-c"
-);
-
+  });
+  initCustomSlider(
+    "#splide-close",
+    {
+      perPage: 4,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        768: { perPage: 3 },
+        530: { perPage: 2 },
+        400: { perPage: 1 },
+      },
+    },
+    ".arrow-prev-c",
+    ".arrow-next-c",
+  );
+  initCustomSlider("#splide-popup", {
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
+    initCustomSlider("#splide-popup-dial", {
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
+     initCustomSlider("#splide-popup-hand", {
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
 });

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timepiece's Card - 3</title>
+        <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/preloader.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+</head>
+<body>
+    <!-- PRELOADER -->
+<div id="preloader">
+  <div class="clock-wrap">
+    <div class="ring"></div>
+
+    <!-- Rotating arc -->
+    <svg class="arc-svg" viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="58"
+        stroke="#c9a98a"
+        stroke-width="1"
+        stroke-dasharray="60 304"
+        stroke-linecap="round"
+        opacity="0.6"/>
+    </svg>
+
+    <!-- Tick marks -->
+    <svg class="ticks-svg" viewBox="0 0 120 120" fill="none">
+      <g stroke="rgba(255,255,255,0.25)">
+        <!-- 12 ticks -->
+        <line x1="60" y1="4"  x2="60" y2="10"  stroke-width="1.5" transform="rotate(0 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(30 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(60 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="10"  stroke-width="1.5" transform="rotate(90 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(120 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(150 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="10"  stroke-width="1.5" transform="rotate(180 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(210 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(240 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="10"  stroke-width="1.5" transform="rotate(270 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(300 60 60)"/>
+        <line x1="60" y1="4"  x2="60" y2="8"   stroke-width="0.8" transform="rotate(330 60 60)"/>
+      </g>
+    </svg>
+
+    <div class="face"></div>
+    <div class="hand-hour"></div>
+    <div class="hand-minute"></div>
+    <div class="hand-second"></div>
+    <div class="center-dot"></div>
+  </div>
+
+  <div class="brand">Stauf</div>
+
+  <div class="bar-wrap">
+    <div class="bar-fill"></div>
+  </div>
+
+  <div class="loading-text">Loading</div>
+</div>
+<!-- PAGE CONTENT (появляется после лоадера) -->
+<div id="content">
+  <div class="wrapper">
+               <!-- HEADER -->
+      <div class="">
+        <div class="header_bg">
+          <div class="container">
+            <header class="header">
+              <div class="header_logo">
+                <a href="#!" class="header_logo-link">
+                  <img
+                    src="images/Logo.svg"
+                    alt="logo"
+                    class="header_logo-link"
+                  />
+                </a>
+              </div>
+              <nav class="header_nav">
+                <ul class="header_nav-list">
+                  <li class="header_nav-list-item">
+                    <a href="#!" class="header_nav-list-item-link"
+                      >timepieces</a
+                    >
+                  </li>
+                  <li class="header_nav-list-item">
+                    <div class="dropdown">
+                      <button class="dropbtn">
+                        manufacture
+                        <img
+                          src="images/keyboard_arrow_down.svg"
+                          alt="arrow"
+                          class="dropbtn-arrow"
+                        />
+                      </button>
+                      <ul class="mobile-subnav">
+                        <li><a href="#!">The art of watchmaking</a></li>
+                        <li><a href="#!">About Stauf</a></li>
+                        <li><a href="#!">News</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header_nav-list-item">
+                    <div class="dropdown">
+                      <button class="dropbtn dropbtn-resourse">
+                        resources
+                        <img
+                          src="images/keyboard_arrow_down.svg"
+                          alt="arrow"
+                          class="dropbtn-arrow"
+                        />
+                      </button>
+                      <ul class="mobile-subnav">
+                        <li><a href="#!">Service</a></li>
+                        <li><a href="#!">Retails</a></li>
+                        <li><a href="#!">Contact</a></li>
+                        <li><a href="#!">Download / Press Area</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="header_lang">
+                  <img
+                    src="images/language.svg"
+                    alt="language"
+                    class="header_lang-img"
+                  />
+                  <p class="header_lang-text">en</p>
+                </div>
+                <button class="burger" id="burger-menu">
+                  <span></span>
+                  <span></span>
+                </button>
+              </nav>
+            </header>
+            <div class="overlay"></div>
+
+            <div class="mega-menu">
+              <div class="container mega-menu-desktop">
+                <div class="card">
+                  <h4 class="card-title">The art of watchmaking</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h4 class="card-title">About Stauf</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg2.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">News</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg3.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="resources-menu">
+              <div class="container mega-menu-desktop">
+                <div class="card">
+                  <h4 class="card-title">Service</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h4 class="card-title">Retails</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg1.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">Contact</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg2.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">Download / Press Area</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg3.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <main class="main">
+  
+
+<!-- ─── SECTION 1: HERO ─── -->
+<section class="section-hero">
+  <div class="container">
+<!-- LEFT: title + watch image + theme toggle -->
+  <div class="hero-left">
+    <div class="hero-left-col">
+    <h1 class="hero-title">Watch<br>Title</h1>
+     <div class="hero-watch-img">
+    
+      <img src="images/ClockMain.png" alt="Watch"/>
+      <img class="hero-watch-img-dial" src="images/Dial.svg" alt="Dial"/>
+
+    </div>
+        <div class="hero-bottom">
+      <div class="toggle-wrap">
+        <label class="toggle" title="Toggle dark/light theme">
+          <input type="checkbox" id="themeToggle"/>
+          <span class="toggle-track"></span>
+          <img src="images/sun-shining-sun-sunrise-shine_svgrepo.com.svg" alt="" class="toggle-img toggle-img-sun">
+          <span class="toggle-thumb"></span>
+          <img src="images/Vector.svg" alt="" class="toggle-img toggle-img-moon">
+
+        </label>
+       
+      </div>
+      <div class="hero-download">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>
+     
+      </div>
+    </div>
+    </div>
+    <div class="dial-bottom-box dial-bottom-box-mob">
+        <img src="images/info.svg" alt="info" class="deal-info deal-info-dark">
+        <img src="images/info-white.svg" alt="info" class="deal-info deal-info-white">
+
+         <p class="deal-footer-text">
+        
+     Ціна від 500 €. Усі годинники виготовляються індивідуально на замовлення. Ми працюємо без серійного виробництва — кожен годинник створюється під конкретний запит і може бути адаптований за дизайном, оздобленням та технічними деталями.<a href="#" id="more-text"data-popup="popupInfo">More</a>
+    </p>
+
+    <button class="btn ">Inquire</button>
+    </div>
+    
+  </div>
+
+  <!-- RIGHT: deal info + customization -->
+  <div class="hero-right">
+    <div class="hero-right-content">
+        <div class="hero-hidden">
+              <div class="hero-content-change">
+                <div class="hero-details-mob">
+                        <div class="press_tabs">
+                <button class="tab_btn active" data-tab="deal">deal</button>
+                <button class="tab_btn" data-tab="movement">movement</button>
+                <button class="tab_btn" data-tab="clasp">clasp</button>
+              
+            </div>
+            <div class="deal-box">
+     <p class="deal-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <button class="btn-more btn-outline" data-popup="popup-case">More details</button>
+                </div>
+     
+
+    </div>
+    <div class="deal-label">Deal</div>
+<div class="deal-box">
+     <p class="deal-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <button class="btn-more btn-outline" data-popup="popup-case">More details</button>
+
+   
+</div>
+   
+
+    <!-- Three groups of tags (три групи кастомізації) -->
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div class="tags" id="tags-case">
+        <div class="tag active">Dials</div>
+        <div class="tag">Hands</div>
+        <div class="tag">Strap </div>
+      </div>
+     
+    </div>
+
+    <!-- Slider / dial thumbnails -->
+    <div class="dial-thumbs">
+          <div id="splide-dial" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                     <div class="dial-thumb active">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                        <li class="splide__slide">
+                     <div class="dial-thumb">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    
+     
+     
+    </div>
+              </div>
+       <div class="hero-content-change">
+     <div class="deal-label">Movement</div>
+<div class="deal-box">
+     <p class="deal-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <button class="btn-more btn-outline"data-popup="popup-case">More details</button>
+</div>
+   
+
+    <!-- Three groups of tags (три групи кастомізації) -->
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div class="tags" id="tags-case">
+        <div class="tag active">Dials</div>
+        <div class="tag">Hands</div>
+        <div class="tag">Strap </div>
+      </div>
+     
+    </div>
+
+    <!-- Slider / dial thumbnails -->
+    <div class="dial-thumbs">
+          <div id="splide-moment" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                     <div class="dial-thumb active">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                        <li class="splide__slide">
+                     <div class="dial-thumb">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    
+     
+     
+    </div>
+
+    </div>
+       <div class="hero-content-change">
+     <div class="deal-label">Clasp</div>
+<div class="deal-box">
+     <p class="deal-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <button class="btn-more btn-outline" data-popup="popup-case">More details</button>
+</div>
+   
+
+    <!-- Three groups of tags (три групи кастомізації) -->
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div class="tags" id="tags-case">
+        <div class="tag active">Dials</div>
+        <div class="tag">Hands</div>
+        <div class="tag">Strap </div>
+      </div>
+     
+    </div>
+
+    <!-- Slider / dial thumbnails -->
+    <div class="dial-thumbs">
+          <div id="splide-clasp" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                     <div class="dial-thumb active">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                        <li class="splide__slide">
+                     <div class="dial-thumb">
+        <img src="images/Dial.svg" alt="Arabic Numerals"/>
+        <span class="dial-thumb-label">Arabic Numerals</span>
+      </div>
+                    </li>
+                    <li class="splide__slide">
+                         <div class="dial-thumb">
+        <img src="images/Dial2.svg" alt="Roman Numerals"/>
+        <span class="dial-thumb-label">Roman Numerals</span>
+      </div>
+               
+                    </li>
+                    <li class="splide__slide">
+                       
+        <div class="dial-thumb">
+        <img src="images/Dial3.svg" alt="Applied Hour"/>
+        <span class="dial-thumb-label">Applied Hour</span>
+      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    
+     
+     
+    </div>
+
+    </div>
+        </div>
+      
+
+   
+
+    <div class="dial-bottom-box">
+        <img src="images/info.svg" alt="info" class="deal-info deal-info-dark">
+        <img src="images/info-white.svg" alt="info" class="deal-info deal-info-white">
+
+         <p class="deal-footer-text">
+        
+     Ціна від 500 €. Усі годинники виготовляються індивідуально на замовлення. Ми працюємо без серійного виробництва — кожен годинник створюється під конкретний запит і може бути адаптований за дизайном, оздобленням та технічними деталями.<a href="#" id="more-text"data-popup="popupInfo">More</a>
+    </p>
+
+    <button class="btn ">Inquire</button>
+    </div>
+        </div>
+     
+    </div>
+  </div>
+
+   
+
+  
+    <div>
+     
+
+   
+  </div>
+
+</section>
+
+<!-- ─── SECTION 2: ANATOMY ─── -->
+<section class="section-anatomy">
+    <div class="container">
+ <div class="anatomy-left">
+    <div class="anatomy-title">Anatomy of Time</div>
+    <p class="anatomy-text">
+      Lorem ipsum dolor sit amet, email. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+    </p>
+  </div>
+  <div class="anatomy-right">
+   
+      
+      <img src="images/watchEx.png" alt="watch view"/>
+   
+   
+   
+  </div>
+    </div>
+ 
+</section>
+
+<!-- ─── SECTION 3: ARTISTRY (DARK) ─── -->
+<section class="section-artistry">
+    <div class="container">
+ <div class="artistry-title">Artistry in Every Detail</div>
+
+  <!-- Row 1: 4 items -->
+  <div class="artistry-grid">
+    <div class="artistry-item">
+      <img src="images/Img.jpg" alt="Watch Case"/>
+      <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Watch case</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item">
+      <img src="images/Img-1.jpg" alt="Dial"/>
+       <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label" >Dial</span>
+        <button class="overlay-btn" data-popup="pop-dial">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item">
+      <img src="images/Img-2.jpg" alt="Hands"/>
+     <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Hands</span>
+        <button class="overlay-btn" data-popup="pop-hand">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item">
+      <img src="images/Img-3.jpg" alt="Bezel"/>
+       <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Bezel</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: 4 items -->
+  <div class="artistry-grid-2">
+    <div class="artistry-item">
+      <img src="images/Img-4.jpg" alt="Glass"/>
+      <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Glass</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item">
+      <img src="images/Img-5.jpg" alt="Strap and Buckle"/>
+    <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Strap and buckle</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item">
+      <img src="images/Img-6.jpg" alt="Functions"/>
+     <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">Functions</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+    <div class="artistry-item" style="position:relative;">
+      <img src="images/Img-7.jpg" alt="The winding crown"/>
+      <div class="card-overlay">
+        <div class="over-box">
+            <span class="artistry-item-label">The winding crown<br>and the pusher</span>
+        <button class="overlay-btn">
+            <img src="images/plus.svg" alt="more">
+        </button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+    </div>
+ 
+</section>
+
+<!-- ─── SECTION 4: SPECIFICATIONS ─── -->
+<section class="section-specs">
+    <div class="container">
+        <div class="specs-left">
+    <div class="specs-title">Specifications</div>
+    <p class="specs-desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    </p>
+      <div class="specs-right specs-right-mob">
+   
+    <img src="/images/specImg.jpg" alt="Watch Specifications"/>
+  </div>
+
+    <div class="specs-accordion">
+
+      <div class="spec-item">
+        <div class="spec-header" ">
+          <span class="spec-header-label">Case</span>
+          <span class="spec-icon"></span>
+        </div>
+        <div class="spec-body">
+          <div class="spec-body-inner">
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Material:</h3>
+                <p class="spec-body-inner-box-desc">Solid Platinum 950</p>
+            </div>
+          
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Diameter:</h3>
+                <p class="spec-body-inner-box-desc">42 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Thickness:</h3>
+                <p class="spec-body-inner-box-desc">10.5 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Water Resistance:</h3>
+                <p class="spec-body-inner-box-desc">30 m/3 ATM</p>
+            </div>
+              <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Caseback:</h3>
+                <p class="spec-body-inner-box-desc">Exhibition sapphire crystal</p>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-header" ">
+          <span class="spec-header-label">Movement</span>
+          <span class="spec-icon"></span>
+        </div>
+        <div class="spec-body">
+            <div class="spec-body-inner">
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Material:</h3>
+                <p class="spec-body-inner-box-desc">Solid Platinum 950</p>
+            </div>
+          
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Diameter:</h3>
+                <p class="spec-body-inner-box-desc">42 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Thickness:</h3>
+                <p class="spec-body-inner-box-desc">10.5 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Water Resistance:</h3>
+                <p class="spec-body-inner-box-desc">30 m/3 ATM</p>
+            </div>
+              <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Caseback:</h3>
+                <p class="spec-body-inner-box-desc">Exhibition sapphire crystal</p>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-header" ">
+          <span class="spec-header-label">Dial & Hands</span>
+          <span class="spec-icon"></span>
+        </div>
+        <div class="spec-body">
+            <div class="spec-body-inner">
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Material:</h3>
+                <p class="spec-body-inner-box-desc">Solid Platinum 950</p>
+            </div>
+          
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Diameter:</h3>
+                <p class="spec-body-inner-box-desc">42 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Thickness:</h3>
+                <p class="spec-body-inner-box-desc">10.5 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Water Resistance:</h3>
+                <p class="spec-body-inner-box-desc">30 m/3 ATM</p>
+            </div>
+              <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Caseback:</h3>
+                <p class="spec-body-inner-box-desc">Exhibition sapphire crystal</p>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-header" ">
+          <span class="spec-header-label">Strap</span>
+          <span class="spec-icon"></span>
+        </div>
+        <div class="spec-body">
+           <div class="spec-body-inner">
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Material:</h3>
+                <p class="spec-body-inner-box-desc">Solid Platinum 950</p>
+            </div>
+          
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Diameter:</h3>
+                <p class="spec-body-inner-box-desc">42 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Thickness:</h3>
+                <p class="spec-body-inner-box-desc">10.5 mm</p>
+            </div>
+            <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Water Resistance:</h3>
+                <p class="spec-body-inner-box-desc">30 m/3 ATM</p>
+            </div>
+              <div class="spec-body-inner-box">
+                <h3 class="spec-body-inner-box-title">Caseback:</h3>
+                <p class="spec-body-inner-box-desc">Exhibition sapphire crystal</p>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="specs-right">
+   
+    <img src="/images/specImg.jpg" alt="Watch Specifications"/>
+  </div>
+    </div>
+
+  
+
+</section>
+   <!-- video-hero -->
+
+<section class="video-hero">
+    <div class="container">
+ <div class="video-hero__bg">
+    <img src="images/videoHero.jpg" alt="Drawing process">
+    </div>
+
+  <div class="video-hero__overlay"></div>
+
+  <div class="video-hero__content">
+    <div class="video-hero__text">
+      <h2 class="video-hero__title">THE GEOMETRY OF MOTION</h2>
+      <p class="video-hero__subtitle">
+        From the first technical sketch to an impeccable <br>
+        mechanical symphony on your wrist.
+      </p>
+    </div>
+
+    <div class="card_play-btn video-hero__play-btn">
+                            <img src="images/play.svg" alt="play" />
+                          </div>
+  </div>
+    </div>
+ 
+</section>
+ <section class="commitment">
+          <div class="container">
+            <div class="commitment-content">
+              <div class="commitment-content-header">
+                <h2 class="commitment__title">CLOSE-UP SERIES</h2>
+                <div class="arrow_btn-wrap">
+                  <a href="#!" class="arrow-btn arrow-prev-c">
+                    <img src="images/arrowprev.svg" alt="prev" />
+                  </a>
+                  <a href="#!" class="arrow-btn arrow-next-c">
+                    <img src="images/arrow.svg" alt="next" />
+                  </a>
+                </div>
+              </div>
+
+                 <div id="splide-close" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                    <div class="close-up">
+                      <img src="images/clode-upImg.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                       <div class="close-up">
+                      <img src="images/clode-upImg1.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="close-up">
+                      <img src="images/clode-upImg2.jpg" alt="watch">
+                    </div>
+                    </li>
+                     <li class="splide__slide">
+                        <div class="close-up">
+                      <img src="images/clode-upImg3.jpg" alt="watch">
+                    </div>
+                    </li>
+                      <li class="splide__slide">
+                    <div class="close-up">
+                      <img src="images/clode-upImg.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                       <div class="close-up">
+                      <img src="images/clode-upImg1.jpg" alt="watch">
+                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-tryon">
+  <div class="container tryon-container">
+    
+    <div class="tryon-visual">
+      <img src="images/hand1.png" alt="Hand 1" class="hand-img active">
+      <img src="images/hand2.png" alt="Hand 2" class="hand-img">
+      <img src="images/hand3.png" alt="Hand 1" class="hand-img">
+      <img src="images/hand4.png" alt="Hand 2" class="hand-img">
+    </div>
+
+    <div class="tryon-content">
+      <h2 class="tryon-title">TRY ON THIS MODEL</h2>
+      <p class="tryon-text">
+        For a watch to fit perfectly, getting the size right is key. We're here to help you see exactly how it will look on your wrist. Just select your wrist measurement below.
+      </p>
+      
+      <div class="tryon-controls">
+        <input type="number" class="tryon-input" placeholder="16" value="16">
+        <button class="btn">Try on</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+      </main>
+       <!-- FOOTER -->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer_top">
+              <div class="footer_col footer_col-info">
+                <img
+                  src="images/Logo.svg"
+                  alt="Stauf Logo"
+                  class="footer_logo"
+                />
+                <p class="footer_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor
+                </p>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Timepieces</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">Model Title 1</a></li>
+                  <li><a href="#!">Model Title 2</a></li>
+                  <li><a href="#!">Model Title 3</a></li>
+                  <li><a href="#!">Model Title 4</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Manufacture</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">The art of watchmaking</a></li>
+                  <li><a href="#!">About Stauf</a></li>
+                  <li><a href="#!">News</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Resources</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">Service</a></li>
+                  <li><a href="#!">Retails</a></li>
+                  <li><a href="#!">Download / Press Area</a></li>
+                  <li><a href="#!">World of Stauf</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Contact</h5>
+                <div class="footer_contact-info">
+                  <p>inh. Yuriy Shapiro</p>
+                  <p>Burgholzstr. 23</p>
+                  <p>70376 Stuttgart</p>
+                  <p>Deutschland</p>
+                  <h5 class="footer_email">
+                    Email:
+                    <a href="mailto:info@deklawtches.com"
+                      >info@deklawtches.com</a
+                    >
+                  </h5>
+                </div>
+              </div>
+              <div class="footer_col footer_col-info footer_col-info-mob">
+                <img
+                  src="images/Logo.svg"
+                  alt="Stauf Logo"
+                  class="footer_logo"
+                />
+                <p class="footer_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor
+                </p>
+              </div>
+            </div>
+
+            <div class="footer_bottom">
+              <p class="footer_copy">© 2026 — STAUF Uhrmacheratelier</p>
+
+              <div class="footer_legal">
+                <a href="#!">Impressum</a>
+                <a href="#!">Privacy notice</a>
+                <a href="#!">Terms of use</a>
+              </div>
+
+              <div class="footer_socials">
+                <a href="#!"
+                  ><img src="images/instagram.svg" alt="Instagram"
+                /></a>
+                <a href="#!"
+                  ><img src="images/facebook.svg" alt="Facebook"
+                /></a>
+                <a href="#!"><img src="images/youtube.svg" alt="YouTube" /></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="pop-up-overlay"id="mainOverlay" ></div>
+<div class="pop-up" id="popup-case" data-popup>
+        <div class="pop-up-content">
+            <div class="pop-up-head">
+                <h2 class="pop-up-title">The case</h2>
+                <img src="images/close.svg" alt="close" class="pop-up-close">
+            </div>
+            
+            <p class="pop-up-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div id="splide-popup" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/popUpimg.jpg" alt="watch" class="pop-up-img">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg1.jpg" alt="watch" class="pop-up-img">
+               
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg2.jpg" alt="watch" class="pop-up-img">
+       
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="pop-up" id="pop-dial" data-popup>
+        <div class="pop-up-content">
+            <div class="pop-up-head">
+                <h2 class="pop-up-title">The Dial</h2>
+                <img src="images/close.svg" alt="close" class="pop-up-close">
+            </div>
+            
+            <p class="pop-up-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div id="splide-popup-dial" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/popUpimg2.jpg" alt="watch" class="pop-up-img">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg1.jpg" alt="watch" class="pop-up-img">
+               
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg.jpg" alt="watch" class="pop-up-img">
+       
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div> 
+       <div class="pop-up" id="pop-hand" data-popup>
+        <div class="pop-up-content">
+            <div class="pop-up-head">
+                <h2 class="pop-up-title">The Dial</h2>
+                <img src="images/close.svg" alt="close" class="pop-up-close">
+            </div>
+            <div class="press_tabs">
+                <button class="tab_btn active" data-tab="1">type 1</button>
+                <button class="tab_btn" data-tab="2">type 2</button>
+                <button class="tab_btn" data-tab="3">type 3</button>
+                <button class="tab_btn" data-tab="4">type 4 </button>
+            </div>
+            <p class="pop-up-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div id="splide-popup-hand" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/popUpimg2.jpg" alt="watch" class="pop-up-img">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg1.jpg" alt="watch" class="pop-up-img">
+               
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/popUpimg.jpg" alt="watch" class="pop-up-img">
+       
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="pop-up-info" id="popupInfo">
+    <button class="pop-up-close" id="closeBtn">
+        <img src="images/close-white.svg" alt="Close">
+    </button>
+
+    <div class="pop-up-container">
+        <div class="pop-up-text-side">
+            <h2 class="pop-up-title">Detailed Information</h2>
+            <div class="pop-up-scroll-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <div class="pop-up-image-side">
+            <img src="images/popupinfo.jpg" alt="Stauf Watch Detail">
+        </div>
+    </div>
+</div>
+<div class="pop-up-save" id="popupSave">
+  <div class="pop-up-save-container">
+    
+    <button class="pop-up-close" id="closeBtnSave">
+      <img src="images/close.svg" alt="Close">
+    </button>
+
+    <div class="pop-up-tools">
+      <button class="tool-btn" id="downloadWatch">
+        <img src="images/upload.svg" alt="Download">
+        <span>Save image</span>
+      </button>
+      <button class="tool-btn" id="shareWatch">
+        <img src="images/sharepop.svg" alt="Share">
+        <span>Share image</span>
+      </button>
+    </div>
+
+    <div class="pop-up-watch-preview">
+      <img src="images/ClockMain.png" alt="Stauf Watch Preview">
+      <img class="save-dial" src="images/Dial.svg" alt="Stauf Watch Preview">
+
+    </div>
+
+  </div>
+</div>
+
+    
+    </div>
+</div>
+    
+       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/cardMain.js"></script>
+    <script src="js/handAnimation.js"></script>
+    <script src="js/preloader.js"></script>
+
+</body>
+</html>

@@ -680,6 +680,83 @@
 .press-content {
   margin-bottom: 32px;
 }
+/* --- СТИЛИ ДЛЯ ВИДЕО ПОПАПА --- */
+
+.pop-up-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Очень темный фон для фокуса на видео */
+  display: none; /* Скрыт по умолчанию */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Поверх всех остальных элементов */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Активное состояние попапа */
+.pop-up-video.active {
+  display: flex;
+  opacity: 1;
+}
+
+.pop-up-video-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px; 
+  box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+}
+
+/* Контейнер для сохранения пропорций 16:9 */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+/* Кнопка закрытия (белый крестик поверх темного фона) */
+.pop-up-video #closeBtnVideo {
+  position: absolute;
+  top: -40px; /* Вынесена за пределы видео сверху */
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2010;
+  transition: transform 0.3s ease;
+}
+
+.pop-up-video #closeBtnVideo:hover {
+  transform: rotate(90deg);
+}
+
+.pop-up-video #closeBtnVideo img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Адаптив для мобильных: кнопка закрытия внутри */
+@media (max-width: 768px) {
+  .pop-up-video #closeBtnVideo {
+    top: 10px;
+    right: 10px;
+  }
+}
 
 /* --- АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
@@ -888,6 +965,9 @@
   .video_card {
     grid-column: span 3;
     height: 300px;
+  }
+  .video-wrapper{
+    height: 500px;
   }
 
   .footer_top {
