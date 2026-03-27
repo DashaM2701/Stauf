@@ -81,7 +81,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .header_logo-link {
@@ -147,6 +147,9 @@
   opacity: 1;
   visibility: visible;
   margin-top: 15px;
+
+  z-index: 1111;
+
 }
 
 .lang-dropdown-menu li a {
@@ -263,9 +266,14 @@
 /* Карточки внутри мегаменю */
 .card {
   width: 100%;
+  display: block;
   color: var(--text);
   position: relative;
   height: 400px;
+ transition: 0.3s all;
+}
+.card:hover{
+  opacity: 0.8;
 }
 
 .card_img-wrapp {
