@@ -1,0 +1,1621 @@
+/* ===== Импорт шрифтов и CSS-переменные ===== */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --text: #fff;
+  --text-grey: #babbb7;
+  --text-grey-dark: #767a7e;
+  --bg-btn: #24262a;
+  --dark: #0a0d0e;
+  --watch-scale-factor: 1.25;
+  --font-garamond: "EB Garamond", serif;
+  --font-gilroy: "Gilroy", sans-serif;
+}
+
+/* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
+.splide__pagination {
+  position: relative !important;
+  margin-top: 64px !important;
+  gap: 10px;
+}
+
+.splide__pagination__page {
+  height: 3px !important;
+  width: 40px !important;
+  border-radius: 0 !important;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--dark) !important;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-animate {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* ===== Header ===== */
+.header_wrapp {
+  background-image: url("../images/BG-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 836px;
+  position: relative;
+  transition:
+    opacity 1.5s ease,
+    background-image 1s ease-in-out;
+}
+
+.header_wrapp.fade {
+  opacity: 0;
+}
+
+.header_bg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+.header_logo-link {
+  height: 68px;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.header_nav-list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.header_nav-list-item-link {
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+}
+
+.header_lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+}
+
+.header_lang-img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+/* Dropdown меню */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: var(--text);
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  font-family: "Gilroy", sans-serif;
+}
+
+.dropbtn-arrow {
+  transition: 0.3s all;
+}
+
+.dropbtn-arrow.active {
+  transform: rotate(180deg);
+}
+
+.mega-menu,
+.resources-menu {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 2;
+  border-top: 1px solid #ddd;
+  margin-top: 37px;
+}
+
+.mega-menu .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.mega-menu.active,
+.resources-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container.mega-menu-desktop {
+  display: flex;
+  gap: 40px;
+}
+
+.container.mega-menu-desktop .card {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Мобильное подменю (появляется в адаптиве) */
+.mobile-subnav {
+  display: none;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.mobile-subnav li {
+  margin-bottom: 15px;
+}
+
+.mobile-subnav a {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+/* Карточки внутри мегаменю */
+.card {
+  width: 100%;
+  color: var(--text);
+  position: relative;
+  height: 400px;
+}
+
+.card_img-wrapp {
+  position: relative;
+  padding: 24px;
+}
+
+.card_img-wrapp p {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--text-grey);
+  z-index: 1;
+  font-family: "Gilroy", sans-serif;
+}
+
+.card_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  transition: 0.3s all;
+  width: 100%;
+}
+
+.card-title {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Gilroy", sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #0a0d0e;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Main ===== */
+.main {
+  overflow: hidden;
+}
+/* ==========================================================================
+   ТИПОГРАФИКА
+   ========================================================================== */
+.stauf-h1-garamond {
+  font-family: var(--font-garamond);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 35px;
+  color: var(--dark);
+}
+
+.stauf-h2-garamond {
+  font-family: var(--font-garamond);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--dark);
+}
+
+.stauf-h4-gilroy {
+  font-family: var(--font-gilroy);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.stauf-p-gilroy {
+  font-family: var(--font-gilroy);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text-grey);
+}
+
+.stauf-p-garamond {
+  font-family: var(--font-garamond);
+  font-size: 32px;
+  letter-spacing: 0.06em;
+
+  color: var(--dark);
+}
+
+.italic {
+  font-style: italic;
+}
+.white {
+  color: var(--text) !important;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-grey {
+  color: #888 !important;
+}
+
+/* ==========================================================================
+   СЕКЦИЯ 1: Summary (Обзор)
+   ========================================================================== */
+.section-model-summary {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+/* Список спецификаций */
+.spec-list {
+  list-style: none;
+}
+
+.spec-list li {
+  display: flex;
+  margin-bottom: 22px;
+  gap: 20px;
+}
+
+.spec-label {
+  flex: 0 0 170px;
+  font-weight: 400;
+  color: var(--text-grey-dark);
+
+  font-size: 20px;
+}
+
+.spec-value {
+  flex: 1;
+  color: var(--dark);
+  font-size: 20px;
+}
+
+.spec-multiline {
+  max-width: 250px;
+}
+
+.summary-quote {
+  max-width: 1096px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ==========================================================================
+   СЕКЦИЯ 2: Origins (Происхождение - Темный блок)
+   ========================================================================== */
+.section-origins {
+  background-color: var(--dark);
+
+  background: radial-gradient(
+    circle at top right,
+    #333 0%,
+    var(--dark-section) 60%
+  );
+  position: relative;
+  padding-top: 100px;
+  height: 530px;
+}
+
+.origins-bg-graphics {
+  background-image: url("../images/SectionInfo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.origins-bg-graphics .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.section-origins h2 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.section-condition {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.stauf-h2-main {
+  margin-bottom: 60px;
+}
+
+.commitment {
+  padding: 100px 0;
+}
+.commitment-content-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+.commitment__title {
+  font-family: "EB Garamond", serif;
+
+  font-size: 32px;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.commitment__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+}
+
+.commitment__subtitle {
+  font-family: "Gilroy", sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.commitment__text {
+  font-family: "Gilroy", sans-serif;
+
+  letter-spacing: 0.06em;
+
+  color: var(--text-grey-dark);
+  margin-bottom: 30px;
+}
+
+.commitment__image {
+  width: 100%;
+  height: 500px;
+  aspect-ratio: 1 / 1.2;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.commitment__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.arrow_btn-wrap {
+  display: flex;
+  gap: 24px;
+}
+.arrow-btn img {
+  width: 32px;
+  height: 32px;
+}
+.commitment__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: flex-end;
+}
+
+/* Страница Info */
+.page-info {
+  background-image: url("../images/pageInfo.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 688px;
+}
+
+.page-info .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.page-info-stauf {
+  position: absolute;
+  top: 72px;
+  right: 0;
+  opacity: 0.1;
+  height: 300px;
+}
+
+.page_info-text {
+  width: 486px;
+  position: relative;
+  z-index: 1;
+}
+
+.page_info-text-desck {
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin-bottom: 34px;
+  font-family: "EB Garamond", serif;
+}
+
+.btn-white {
+  padding: 12px 32px;
+  background: var(--text);
+  color: var(--bg-btn);
+  transition: 0.3s all;
+  font-family: "Gilroy", sans-serif;
+}
+.share {
+  padding: 50px 0;
+}
+.share-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.share-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #262626;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.share-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.share-link {
+  color: #1a1a1a;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.share-link:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+}
+
+.share-link svg {
+  display: block;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--dark);
+  padding: 80px 0 40px;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 120px;
+}
+
+.footer_col {
+  flex: 1;
+}
+
+.footer_col-info {
+  flex: 1.5;
+}
+
+.footer_logo {
+  height: 103px;
+  margin-bottom: 10px;
+  display: block;
+}
+.footer_col-info-mob {
+  display: none;
+}
+.footer_text {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey);
+  line-height: 1.6;
+  max-width: 240px;
+}
+
+.footer_title {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.footer_list li {
+  margin-bottom: 4px;
+}
+
+.footer_list a,
+.footer_contact-info p,
+.footer_contact-info a {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey-dark);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer_email {
+  margin-top: 20px;
+  color: var(--text-grey);
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_bottom {
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer_copy {
+  color: rgba(186, 187, 183, 0.5);
+  font-size: 12px;
+  flex: 1;
+}
+
+.footer_legal {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+  justify-content: center;
+}
+
+.footer_legal a {
+  color: rgba(186, 187, 183, 0.5);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.footer_socials img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.footer_socials a:hover img {
+  opacity: 0.7;
+}
+/* --- DIGITAL PASSPORT POPUP --- */
+.pop-up-passport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2500;
+  padding: 20px;
+  /* opacity: 0; */
+  transition: opacity 0.4s ease;
+}
+
+.pop-up-passport.active {
+  display: flex;
+  opacity: 1;
+}
+
+.passport-container {
+  background: #fff;
+  width: 90%;
+
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  height: auto;
+  max-height: 90vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.passport-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.passport-form-side {
+  flex: 1;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.passport-title {
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.18em;
+
+  margin-bottom: 30px;
+  color: var(--dark);
+}
+
+.passport-steps {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.passport-steps li {
+  font-family: "Gilroy", sans-serif;
+  letter-spacing: 0.06em;
+  list-style: decimal;
+  font-size: 14px;
+  color: var(--text-grey);
+
+  margin-bottom: 32px;
+}
+
+.passport-form .input-group {
+  margin-bottom: 20px;
+}
+
+.passport-form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.passport-form input::placeholder {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-grey);
+}
+.passport-form input:focus {
+  border-bottom-color: #1a1a1a;
+}
+
+.passport-submit {
+  font-family: "Gilroy", sans-serif;
+
+  margin-top: 20px;
+  width: 100%;
+  background: #262626;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.passport-submit:hover {
+  background: #000;
+}
+
+.passport-image-side {
+  background: #f0f0f0;
+  height: 100%;
+}
+
+.passport-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pop-up-passport .pop-up-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.img-mobile {
+  display: none;
+}
+/* --- АНИМИРОВАННОЕ ПОЯВЛЕНИЕ ПРИВЕТСТВИЯ --- */
+
+.passport-stage-welcome-full.active-welcome {
+  display: block;
+  filter: blur(0px) brightness(1);
+}
+
+.passport-stage-welcome-full {
+  position: fixed; /* Фиксируем на экране */
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  height: auto;
+  z-index: 3000; /* Выше чем у первого попапа */
+  display: none; /* Скрыто по умолчанию */
+
+  filter: blur(10px) brightness(0.6);
+  transition: filter 0.8s ease-out;
+}
+
+.passport-stage-welcome-full.active-welcome {
+  filter: blur(0px) brightness(1);
+}
+
+.welcome-full-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.welcome-full-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 60px 50px;
+}
+
+.welcome-full-text-wrap {
+  width: 100%;
+  max-width: 450px;
+}
+
+.welcome-full-text-wrap > * {
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Анимация для последовательного появления текста */
+.passport-stage-welcome-full.active-welcome .welcome-full-text-wrap > * {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.welcome-full-title {
+  animation-delay: 0.3s;
+}
+.welcome-full-subtitle {
+  animation-delay: 0.5s;
+}
+.welcome-full-desc {
+  animation-delay: 0.7s;
+}
+.welcome-full-submit {
+  animation-delay: 0.9s;
+}
+
+.welcome-full-title {
+  font-family: "EB Garamond", serif;
+
+  font-size: 32px;
+  letter-spacing: 0.22em;
+
+  margin-bottom: 25px;
+}
+
+.welcome-full-subtitle {
+  font-size: 16px;
+  letter-spacing: 0.06em;
+
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+}
+
+.welcome-full-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.06em;
+
+  margin-bottom: 40px;
+  font-family: "Gilroy", sans-serif;
+}
+
+/* Белая кнопка */
+.welcome-full-submit {
+  font-family: "Gilroy", sans-serif;
+  letter-spacing: 0.06em;
+
+  width: 100%;
+  max-width: 250px;
+  background: #fff;
+  color: #262626;
+  border: 1px solid #262626;
+  padding: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.welcome-full-submit:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Описание анимации появления */
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Текст опускается на место */
+  }
+}
+.pop-up-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.pop-up-overlay.active {
+  display: block;
+}
+
+/* ============================================
+   АДАПТИВНЫЕ СТИЛИ (МЕДИА-ЗАПРОСЫ)
+   ============================================ */
+@media (max-width: 1100px) {
+  .hero-watch-img {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 956px) {
+  .hero-watch-img img {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  .hero-watch-img-dial {
+    width: 170px !important;
+    height: 170px !important;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .dial-thumb img {
+    width: 94px;
+    height: 94px;
+  }
+
+  .dial-thumb-label {
+    font-size: 10px;
+  }
+
+  .hero-content-change {
+    padding-bottom: 32px;
+  }
+
+  .deal-label {
+    font-size: 18px;
+  }
+
+  .deal-text,
+  .tag {
+    font-size: 14px;
+  }
+
+  .deal-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-anatomy .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .anatomy-right {
+    height: 280px;
+  }
+
+  .section-artistry {
+    padding: 50px 0;
+  }
+
+  .artistry-grid,
+  .artistry-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-specs {
+    padding: 50px 0;
+  }
+
+  .specs-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .commitment {
+    padding: 70px 0;
+  }
+
+  .tryon-container {
+    padding: 50px 40px;
+  }
+
+  .pop-up {
+    width: 540px;
+  }
+
+  .pop-up-title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .pop-up-save {
+    width: 530px;
+  }
+
+  .pop-up-watch-preview img {
+    height: 414px;
+  }
+
+  .save-dial {
+    width: 210px !important;
+    height: 210px !important;
+  }
+
+  .tool-btn img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .header_nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #0a0d0e;
+    flex-direction: column;
+    padding: 130px 20px;
+    transition: 0.4s;
+    align-items: flex-start;
+  }
+
+  .header_nav {
+    align-items: flex-start;
+  }
+
+  .card_img-wrapp {
+    display: none;
+  }
+
+  .header_logo,
+  .header_lang {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mega-menu-desktop {
+    display: none !important;
+  }
+
+  .mobile-subnav.active {
+    display: block;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    display: none !important;
+  }
+
+  .container.mega-menu-desktop {
+    gap: 40px;
+  }
+
+  .dropbtn {
+    font-size: 24px;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+  }
+
+  .header_nav-list.open {
+    right: 0;
+  }
+
+  .header_nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .header_nav-list-item-link,
+  .dropbtn {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .mega-menu,
+  .resources-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: none;
+    padding: 20px 0 0 20px;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .mega-menu.active,
+  .resources-menu.active {
+    display: block;
+  }
+
+  .burger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  .header_wrapp {
+    height: 393px;
+  }
+
+  .text-main {
+    top: 140px;
+  }
+
+  .text-main-title {
+    font-size: 48px;
+  }
+
+  .text-title {
+    margin-bottom: 72px;
+  }
+
+  .btn-outline {
+    font-size: 14px;
+  }
+
+  .footer_logo {
+    height: 55px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 8.5px;
+  }
+
+  .footer {
+    padding: 48px 0;
+  }
+
+  .footer_top {
+    margin-bottom: 69px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 7.5px;
+  }
+
+  .footer_socials img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .commitment__title {
+    font-size: 24px;
+  }
+
+  .commitment-content-header {
+    margin-bottom: 32px;
+  }
+
+  .commitment {
+    padding: 50px 0;
+  }
+
+  .commitment__subtitle {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .commitment__image {
+    height: 350px;
+  }
+
+  .section-model-summary {
+    padding: 70px 0;
+  }
+  .stauf-h1-garamond {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .spec-label,
+  .spec-value {
+    font-size: 16px;
+    flex: none;
+  }
+  .spec-list li {
+    flex-direction: column;
+  }
+  .stauf-p-garamond {
+    font-size: 24px;
+  }
+  .section-origins {
+    padding-top: 50px;
+  }
+
+  .page-info {
+    height: 354px;
+  }
+
+  .page_info-text-desck {
+    font-size: 18px;
+  }
+
+  .page_info-text {
+    width: 250px;
+  }
+}
+
+@media (max-width: 760px) {
+  .welcome-full-content {
+    padding: 40px;
+  }
+  .welcome-full-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .welcome-full-subtitle {
+    font-size: 14px;
+  }
+  .passport-form-side {
+    padding: 24px;
+  }
+  .passport-flex {
+    grid-template-columns: 2fr 1fr;
+  }
+  .passport-title {
+    font-size: 14px;
+    margin-bottom: 33px;
+  }
+  .passport-steps li,
+  .passport-form input {
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  .passport-form .input-group {
+    margin-bottom: 0;
+  }
+  .passport-submit {
+    font-size: 11px;
+  }
+  .section-origins h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pop-up {
+    width: 300px;
+    padding: 24px;
+  }
+
+  #splide-popup {
+    height: 300px;
+  }
+
+  #splide-popup .splide__track {
+    height: 100%;
+  }
+
+  #splide-popup .splide__track img {
+    object-fit: cover;
+  }
+
+  .pop-up-save {
+    width: 300px;
+  }
+
+  .pop-up-watch-preview img {
+    height: 300px;
+  }
+
+  .save-dial {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .section-anatomy .container,
+  .section-specs .container {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-right.specs-right-mob {
+    display: block;
+    height: 500px;
+    margin-bottom: 32px;
+  }
+
+  .specs-right img {
+    object-fit: contain;
+  }
+
+  .specs-right {
+    display: none;
+  }
+
+  .tryon-container {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .tryon-visual {
+    order: 1;
+    height: 222px;
+  }
+
+  .tryon-content {
+    padding: 0 15px;
+  }
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .summary-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 530px) {
+  .header_wrapp {
+    height: 100vh;
+  }
+
+  .header_logo-link {
+    height: 40px;
+  }
+
+  .text-main {
+    top: 170px;
+  }
+
+  .text-main-title {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .splide__pagination__page {
+    width: 21px !important;
+    height: 2px !important;
+  }
+
+  .splide__pagination {
+    margin-top: 32px !important;
+  }
+
+  .commitment__subtitle {
+    width: 300px;
+  }
+
+  .commitment__image {
+    height: 500px;
+  }
+
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_col.footer_col-info {
+    display: none;
+  }
+
+  .footer_col.footer_col-info.footer_col-info-mob {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_text,
+  .footer_title,
+  .footer_list a,
+  .footer_contact-info p,
+  .footer_contact-info a {
+    font-size: 16px;
+  }
+
+  .footer_title {
+    margin-bottom: 16px;
+  }
+
+  .footer_top {
+    margin-bottom: 56px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_copy,
+  .footer_legal a {
+    font-size: 14px;
+  }
+
+  .footer_socials img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-left {
+    padding: 0;
+    padding-bottom: 12px;
+  }
+
+  .pop-up-container {
+    flex-direction: column-reverse;
+  }
+
+  .pop-up-text-side {
+    padding: 12px;
+    height: 300px;
+  }
+
+  .pop-up-image-side {
+    height: 200px;
+  }
+
+  .pop-up-info .pop-up-close {
+    top: 10px;
+  }
+
+  .pop-up-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .pop-up-scroll-content p {
+    font-size: 14px;
+  }
+
+  .pop-up-container {
+    position: relative;
+  }
+  .passport-flex {
+    grid-template-columns: 1fr;
+  }
+  .passport-form-side {
+    order: 1;
+  }
+  .passport-image-side {
+    height: 260px;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .passport-steps {
+    margin-bottom: 20px;
+  }
+  .passport-container {
+    width: 70%;
+  }
+
+  .page-info {
+    height: 100vh;
+  }
+
+  .page-info .container {
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 56px;
+  }
+
+  .page_info-text {
+    width: 100%;
+  }
+
+  .page_info-text .btn-white {
+    width: 100%;
+  }
+
+  .page-info-stauf {
+    height: 159px;
+    top: auto;
+    bottom: 125px;
+    left: 0;
+  }
+}
+
+/* ============================================
+   HOVER-ЭФФЕКТЫ ТОЛЬКО ДЛЯ УСТРОЙСТВ С МЫШЬЮ (ДЕСКТОП)
+   ============================================ */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background-color: #ffffff;
+    border-color: var(--bg-btn);
+    color: var(--bg-btn);
+  }
+
+  .btn-outline:hover {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
+
+  .featured-content-card:hover .featured-content-card-img {
+    scale: 1.1;
+  }
+
+  .featured-content-card:hover .btn-outline {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
+
+  .footer_list a:hover,
+  .footer_contact-info a:hover {
+    color: var(--text);
+  }
+}

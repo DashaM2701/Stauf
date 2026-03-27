@@ -9,10 +9,8 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
-p{
+p {
   font-family: "Gilroy", sans-serif;
- 
-
 }
 
 /* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
@@ -386,28 +384,27 @@ p{
   transition: 0.3s all;
   font-family: "Gilroy", sans-serif;
 }
-.error-bg{
-    background-image: url('../images/404-2.png');
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top ;
-   
+.error-bg {
+  background-image: url("../images/404-2.png");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
 }
-.error-bg .container{
- display: flex;
- height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    padding-bottom: 50px;
+.error-bg .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 50px;
 }
-.error-text{
+.error-text {
   font-family: "Gilroy", sans-serif;
-font-size: 20px;
-letter-spacing: 0.06em;
-margin-bottom: 44px;
-color: var(--text-grey);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 44px;
+  color: var(--text-grey);
 }
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
@@ -559,15 +556,14 @@ color: var(--text-grey);
     width: 12px;
     height: 12px;
   }
-  .error-bg{
+  .error-bg {
     height: 60vh;
   }
-  .error-text{
+  .error-text {
     font-size: 18px;
     margin-bottom: 24px;
   }
 }
-
 
 /* Мобильные устройства (до 530px) */
 @media (max-width: 530px) {
@@ -586,8 +582,6 @@ color: var(--text-grey);
     font-size: 30px;
     width: 300px;
   }
-
-
 
   .footer_top {
     flex-direction: column;
@@ -638,10 +632,10 @@ color: var(--text-grey);
   .text-item {
     padding-left: 0;
   }
-   .error-bg{
+  .error-bg {
     height: 400px;
   }
-  .error-text{
+  .error-text {
     font-size: 16px;
     text-align: center;
   }

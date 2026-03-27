@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timepieces-Information-Page</title>
+          <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/informationPage.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+       <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+</head>
+<body>
+        <div class="pop-up-overlay"id="mainOverlay" ></div>
+
+        <div class="pop-up-passport" id="popupPassport">
+    <div class="passport-container">
+        <button class="pop-up-close" id="closeBtnPassport">
+            <img src="images/close-white.svg" alt="Close">
+        </button>
+
+        <div class="passport-flex">
+            <div class="passport-form-side">
+                <h2 class="passport-title">YOUR TIMEPIECE'S<br>DIGITAL PASSPORT</h2>
+                
+                <ol class="passport-steps">
+                    <li>Please locate your Certificate of Authenticity (the card found within the presentation box).</li>
+                    <li>Find the 8-digit serial number on the reverse side.</li>
+                    <li>Enter it in the field below to discover the details of your specific model.</li>
+                </ol>
+
+                <form class="passport-form" action="#">
+                    <div class="input-group">
+                        <input type="text" placeholder="ST-000000-00" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="passport-submit">Enter</button>
+                </form>
+            </div>
+<div class="passport-image-side">
+    <img src="images/sertificate1.jpg" alt="Stauf Luxury Certificate" class="img-desktop">
+    
+    <img src="images/Group 17.jpg" alt="Stauf Luxury Certificate" class="img-mobile">
+</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="passport-stage-welcome-full" id="passportStageWelcome" style="display: none;">
+  
+  <img src="images/passport-welcome.jpg" alt="Stauf Watch" class="welcome-full-bg">
+
+  <div class="welcome-full-content">
+    <div class="welcome-full-text-wrap">
+      <h2 class="welcome-full-title">WELCOME,<br>FULL NAME!</h2>
+      <h3 class="welcome-full-subtitle">THE AUTHENTICITY OF YOUR<br>[MODEL NAME] IS<br>CONFIRMED.</h3>
+      <p class="welcome-full-desc">
+        We have prepared complete details regarding your<br>model, including its creation history and care<br>recommendations.
+      </p>
+      <button class="welcome-full-submit">Open personal archive</button>
+    </div>
+  </div>
+
+</div>
+    <div class="wrapper">
+   <!-- HEADER -->
+      <div class="">
+        <div class="header_bg">
+          <div class="container">
+            <header class="header">
+              <div class="header_logo">
+                <a href="#!" class="header_logo-link">
+                  <img
+                    src="images/Logo.svg"
+                    alt="logo"
+                    class="header_logo-link"
+                  />
+                </a>
+              </div>
+              <nav class="header_nav">
+                <ul class="header_nav-list">
+                  <li class="header_nav-list-item">
+                    <a href="#!" class="header_nav-list-item-link"
+                      >timepieces</a
+                    >
+                  </li>
+                  <li class="header_nav-list-item">
+                    <div class="dropdown">
+                      <button class="dropbtn">
+                        manufacture
+                        <img
+                          src="images/keyboard_arrow_down.svg"
+                          alt="arrow"
+                          class="dropbtn-arrow"
+                        />
+                      </button>
+                      <ul class="mobile-subnav">
+                        <li><a href="#!">The art of watchmaking</a></li>
+                        <li><a href="#!">About Stauf</a></li>
+                        <li><a href="#!">News</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header_nav-list-item">
+                    <div class="dropdown">
+                      <button class="dropbtn dropbtn-resourse">
+                        resources
+                        <img
+                          src="images/keyboard_arrow_down.svg"
+                          alt="arrow"
+                          class="dropbtn-arrow"
+                        />
+                      </button>
+                      <ul class="mobile-subnav">
+                        <li><a href="#!">Service</a></li>
+                        <li><a href="#!">Retails</a></li>
+                        <li><a href="#!">Contact</a></li>
+                        <li><a href="#!">Download / Press Area</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="header_lang">
+                  <img
+                    src="images/language.svg"
+                    alt="language"
+                    class="header_lang-img"
+                  />
+                  <p class="header_lang-text">en</p>
+                </div>
+                <button class="burger" id="burger-menu">
+                  <span></span>
+                  <span></span>
+                </button>
+              </nav>
+            </header>
+            <div class="overlay"></div>
+
+            <div class="mega-menu">
+              <div class="container mega-menu-desktop">
+                <div class="card">
+                  <h4 class="card-title">The art of watchmaking</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h4 class="card-title">About Stauf</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg2.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">News</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/megaImg3.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="resources-menu">
+              <div class="container mega-menu-desktop">
+                <div class="card">
+                  <h4 class="card-title">Service</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h4 class="card-title">Retails</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg1.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">Contact</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg2.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 class="card-title">Download / Press Area</h4>
+                  <div class="card_img-wrapp">
+                    <img
+                      src="images/resImg3.jpg"
+                      alt="watchmaking"
+                      class="card_img"
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="main-wrapper">
+    
+    <section class="section-model-summary">
+        <div class="container">
+            
+            <div class="summary-grid">
+                <div class="summary-text">
+                    <h1 class="stauf-h1-garamond">MODEL FULL TITLE</h1>
+                    
+                    <ul class="spec-list stauf-p-gilroy">
+                        <li><span class="spec-label">Timepiece owner:</span> <span class="spec-value">Full Name</span></li>
+                        <li><span class="spec-label">Configuration:</span> <span class="spec-value">ST-000000-00</span></li>
+                        <li><span class="spec-label">Model Reference:</span> <span class="spec-value">Klassik Automatic 42mm</span></li>
+                        <li><span class="spec-label">Date of Manufacture:</span> <span class="spec-value">Juli 20, 2024</span></li>
+                        <li><span class="spec-label">Case Material:</span> <span class="spec-value">Polished 316L Steel / 18K Rose Gold</span></li>
+                        <li><span class="spec-label">Special Features:</span> <span class="spec-value spec-multiline">Hand-engraved rotor, Limited Edition 12/50</span></li>
+                    </ul>
+                </div>
+                
+                <div class="summary-image">
+                    <img src="images/specImg.jpg" alt="Stauf Klassik Automatic 42mm">
+                </div>
+            </div>
+
+            <div class="summary-quote">
+                <p class="stauf-p-garamond italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="section-origins">
+        <div class="origins-bg-graphics">
+            <div class="container">
+                <h2 class="stauf-h2-garamond white uppercase">THE ORIGINS OF YOUR TIMEPIECE</h2>
+                
+                <p class="stauf-p-gilroy text-grey uppercase Origins-text-width">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+      <section class="commitment">
+          <div class="container">
+            <div class="commitment-content">
+              <div class="commitment-content-header">
+                <h2 class="commitment__title">OUR COMMITMENT TO EXCELLENCE</h2>
+                <div class="arrow_btn-wrap">
+                  <a href="#!" class="arrow-btn arrow-prev-c">
+                    <img src="images/arrowprev.svg" alt="prev" />
+                  </a>
+                  <a href="#!" class="arrow-btn arrow-next-c">
+                    <img src="images/arrow.svg" alt="next" />
+                  </a>
+                </div>
+              </div>
+
+              <div id="splide-commintment" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <a href="#!" class="commitment__item">
+                        <h3 class="commitment__subtitle">
+                          INTERNATIONAL WARRANTY
+                        </h3>
+                        <p class="commitment__text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore
+                        </p>
+                        <div class="commitment__image">
+                          <img
+                            src="images/commitmentImg.jpg"
+                            alt="Close up of watch dial"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                    <li class="splide__slide">
+                      <a href="#!" class="commitment__item">
+                        <h3 class="commitment__subtitle">
+                          MAINTENANCE & RESTORATION
+                        </h3>
+                        <p class="commitment__text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore
+                        </p>
+                        <div class="commitment__image">
+                          <img
+                            src="images/commitmentImg1.jpg"
+                            alt="Watch maintenance"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                    <li class="splide__slide">
+                      <a href="#!" class="commitment__item">
+                        <h3 class="commitment__subtitle">
+                          CERTIFICATE OF AUTHENTICITY
+                        </h3>
+                        <p class="commitment__text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore
+                        </p>
+                        <div class="commitment__image">
+                          <img
+                            src="images/commitmentImg2.jpg"
+                            alt="Stauf Certificate of Authenticity"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+         <!-- PAGE INFO -->
+        <section class="page-info">
+          <div class="container">
+            <div class="page-info-box">
+              <img
+                src="images/Stauf.svg"
+                alt="Statuf"
+                class="page-info-stauf"
+              />
+              <div class="page_info-text">
+                <p class="page_info-text-desck">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button class="btn-white">The art watchmaking</button>
+              </div>
+            </div>
+          </div>
+        </section>
+         <section class="commitment">
+          <div class="container">
+            <div class="commitment-content">
+              <div class="commitment-content-header">
+                <h2 class="commitment__title">CLOSE-UP SERIES</h2>
+                <div class="arrow_btn-wrap">
+                  <a href="#!" class="arrow-btn arrow-prev">
+                    <img src="images/arrowprev.svg" alt="prev" />
+                  </a>
+                  <a href="#!" class="arrow-btn arrow-next">
+                    <img src="images/arrow.svg" alt="next" />
+                  </a>
+                </div>
+              </div>
+
+                 <div id="splide-galery" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                    <div class="close-up">
+                      <img src="images/clode-upImg.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                       <div class="close-up">
+                      <img src="images/clode-upImg1.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="close-up">
+                      <img src="images/clode-upImg2.jpg" alt="watch">
+                    </div>
+                    </li>
+                     <li class="splide__slide">
+                        <div class="close-up">
+                      <img src="images/clode-upImg3.jpg" alt="watch">
+                    </div>
+                    </li>
+                      <li class="splide__slide">
+                    <div class="close-up">
+                      <img src="images/clode-upImg.jpg" alt="watch">
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                       <div class="close-up">
+                      <img src="images/clode-upImg1.jpg" alt="watch">
+                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="share">
+            <div class="container">
+                <div class="share-block">
+    <span class="share-title">SHARE</span>
+    <div class="share-icons">
+        <a href="#" class="share-link" aria-label="Copy Link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </a>
+        <a href="#" class="share-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="#" class="share-link" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.294 19.497h2.039L6.486 3.24H4.298l13.309 17.41z"/></svg>
+        </a>
+        <a href="#" class="share-link" aria-label="Threads">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.25 20c-2.41 1.33-5.25 2-8.25 2-6.63 0-12-5.37-12-12S4.37 0 11 0c5.52 0 10 4.48 10 10 0 2.21-1.79 4-4 4-1.1 0-2-.9-2-2V7c0-1.66-1.34-3-3-3s-3 1.34-3 3v6c0 1.66 1.34 3 3 3 1.11 0 2.1-.6 2.59-1.51C15.47 16.5 17.13 18 19.25 18c1.52 0 2.91-.56 3.98-1.5l-1.48-1.5c-.71.63-1.63 1-2.5 1zM11 4c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/></svg>
+        </a>
+        <a href="#" class="share-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#" class="share-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+    </div>
+</div>
+            </div>
+        </section>
+
+</div>
+ <!-- FOOTER -->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer_top">
+              <div class="footer_col footer_col-info">
+                <img
+                  src="images/Logo.svg"
+                  alt="Stauf Logo"
+                  class="footer_logo"
+                />
+                <p class="footer_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor
+                </p>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Timepieces</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">Model Title 1</a></li>
+                  <li><a href="#!">Model Title 2</a></li>
+                  <li><a href="#!">Model Title 3</a></li>
+                  <li><a href="#!">Model Title 4</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Manufacture</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">The art of watchmaking</a></li>
+                  <li><a href="#!">About Stauf</a></li>
+                  <li><a href="#!">News</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Resources</h5>
+                <ul class="footer_list">
+                  <li><a href="#!">Service</a></li>
+                  <li><a href="#!">Retails</a></li>
+                  <li><a href="#!">Download / Press Area</a></li>
+                  <li><a href="#!">World of Stauf</a></li>
+                </ul>
+              </div>
+
+              <div class="footer_col">
+                <h5 class="footer_title">Contact</h5>
+                <div class="footer_contact-info">
+                  <p>inh. Yuriy Shapiro</p>
+                  <p>Burgholzstr. 23</p>
+                  <p>70376 Stuttgart</p>
+                  <p>Deutschland</p>
+                  <h5 class="footer_email">
+                    Email:
+                    <a href="mailto:info@deklawtches.com"
+                      >info@deklawtches.com</a
+                    >
+                  </h5>
+                </div>
+              </div>
+              <div class="footer_col footer_col-info footer_col-info-mob">
+                <img
+                  src="images/Logo.svg"
+                  alt="Stauf Logo"
+                  class="footer_logo"
+                />
+                <p class="footer_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor
+                </p>
+              </div>
+            </div>
+
+            <div class="footer_bottom">
+              <p class="footer_copy">© 2026 — STAUF Uhrmacheratelier</p>
+
+              <div class="footer_legal">
+                <a href="#!">Impressum</a>
+                <a href="#!">Privacy notice</a>
+                <a href="#!">Terms of use</a>
+              </div>
+
+              <div class="footer_socials">
+                <a href="#!"
+                  ><img src="images/instagram.svg" alt="Instagram"
+                /></a>
+                <a href="#!"
+                  ><img src="images/facebook.svg" alt="Facebook"
+                /></a>
+                <a href="#!"><img src="images/youtube.svg" alt="YouTube" /></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+          <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/burger.js"></script>
+     <script src="js/logIn.js"></script>
+</body>
+</html>

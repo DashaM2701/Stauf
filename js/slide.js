@@ -170,4 +170,21 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: true,
     breakpoints: {},
   });
+   initCustomSlider(
+    "#splide-galery",
+    {
+      perPage: 4,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        768: { perPage: 3 },
+        530: { perPage: 2 },
+        400: { perPage: 1 },
+      },
+    },
+    ".arrow-prev",
+    ".arrow-next",
+  );
 });

@@ -9,10 +9,8 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
-p{
+p {
   font-family: "Gilroy", sans-serif;
- 
-
 }
 
 /* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
@@ -279,7 +277,6 @@ p{
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-family: "EB Garamond", serif;
-  
 }
 .btn-outline:active {
   background: var(--bg-btn);
@@ -291,14 +288,13 @@ p{
   color: var(--bg-btn);
   transition: 0.3s all;
 }
-.text-main-subtitle{
+.text-main-subtitle {
   font-family: "Gilroy", sans-serif;
-font-size: 24px;
+  font-size: 24px;
   letter-spacing: 0.06em;
   margin-bottom: 18px;
   text-transform: uppercase;
   color: var(--text);
-
 }
 .luxury-page {
   padding: 150px 0;
@@ -309,18 +305,16 @@ font-size: 24px;
   position: relative;
   text-align: center;
   margin-bottom: 100px;
-  
 }
 
-
 .quote-section::before {
-  content: '“';
+  content: "“";
   position: absolute;
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
   font-family: "EB Garamond", serif;
-  
+
   font-size: 120px;
   color: #f0f0f0;
   z-index: -1;
@@ -328,20 +322,19 @@ font-size: 24px;
 
 .quote-text {
   font-family: "EB Garamond", serif;
-  
+
   font-style: italic;
   font-size: 32px;
-  color:var(--dark);
+  color: var(--dark);
   max-width: 1090px;
   margin: 0 auto;
   text-align: center;
 }
 
-
 .philosophy__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center; 
+  align-items: center;
   gap: 48px;
 }
 
@@ -360,110 +353,104 @@ font-size: 24px;
   padding: 87px 0;
 }
 
-
 .philosophy__title {
   font-family: "EB Garamond", serif;
-  
+
   font-size: 32px;
 
- letter-spacing: 0.06em;
+  letter-spacing: 0.06em;
   margin-bottom: 112px;
   text-transform: uppercase;
 }
-.philosophy__subtitle{
+.philosophy__subtitle {
   font-family: "Gilroy", sans-serif;
- letter-spacing: 0.06em;
- margin-bottom: 8px;
- color: var(--text-grey-dark);
-
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  color: var(--text-grey-dark);
 }
 
 .philosophy__description p {
   font-family: "Gilroy", sans-serif;
-  
 
   color: var(--text-grey-dark);
-  
+
   text-align: justify;
 }
 
 .years {
-    padding: 150px 0;
-    background-image: url('../images/AboutSectionImg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  right 0;
-    height: 473px;
+  padding: 150px 0;
+  background-image: url("../images/AboutSectionImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 0;
+  height: 473px;
 }
 .years .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .years-box {
-   width: 50%;
+  width: 50%;
 }
 .years-box-title {
   font-family: "Gilroy", sans-serif;
   font-size: 20px;
   letter-spacing: 0.06em;
-margin-bottom: 16px;
-color: var(--text);
-text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--text);
+  text-transform: uppercase;
 }
 .years-box-subtitle {
   font-family: "Gilroy", sans-serif;
   letter-spacing: 0.06em;
 
-color: var(--text-grey);
-
+  color: var(--text-grey);
 }
 .dekla {
-    padding: 150px 0;
+  padding: 150px 0;
 }
 
 .dekla-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 .dekla-box-text {
-} 
+}
 .dekla-box-text-title {
   font-family: "EB Garamond", serif;
-font-size: 32px;
-letter-spacing: 0.06em;
-color: var(--dark);
-margin-bottom: 112px;
-text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: var(--dark);
+  margin-bottom: 112px;
+  text-transform: uppercase;
 }
 .dekla-box-text-desc {
-    color: var(--text-grey-dark);
+  color: var(--text-grey-dark);
 }
 .dekla-box-img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-.dekla-box-img img{
-       height: 100%;
-    width: 100%;
-    object-fit: cover;
+.dekla-box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .principles {
   position: relative;
-  background-color: #F5F5F4; 
+  background-color: #f5f5f4;
   padding: 150px 0 0 0;
   overflow: hidden;
   font-family: "EB Garamond", serif;
-  
+
   text-align: center;
 }
-
-
 
 .principles__title {
   font-size: 32px;
@@ -476,14 +463,14 @@ text-transform: uppercase;
 
 .principles__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 64px; 
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   text-align: left;
 }
 
 .principles__item {
   position: relative;
-  padding-left: 50px; 
+  padding-left: 50px;
 }
 
 /* Стилизация римских цифр через атрибут data-number */
@@ -495,14 +482,14 @@ text-transform: uppercase;
   font-family: "EB Garamond", serif;
 
   font-size: 20px;
-  color: var(--text-grey); 
+  color: var(--text-grey);
 }
 
 .principles__subtitle {
   font-family: "Gilroy", sans-serif;
 
   font-size: 20px;
- 
+
   letter-spacing: 0.06em;
   margin-bottom: 15px;
   color: var(--dark);
@@ -510,13 +497,11 @@ text-transform: uppercase;
 
 .principles__text {
   font-family: "Gilroy", sans-serif;
-  
 
-    letter-spacing: 0.06em;
+  letter-spacing: 0.06em;
 
   color: var(--text-grey-dark);
 }
-
 
 .principles__footer-image {
   margin-top: 50px;
@@ -528,7 +513,6 @@ text-transform: uppercase;
 .principles__footer-image img {
   max-width: 600px;
   width: 100%;
- 
 }
 
 /* ===== Footer ===== */
@@ -658,7 +642,7 @@ text-transform: uppercase;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #0A0D0E;
+    background: #0a0d0e;
     flex-direction: column;
     padding: 130px 20px;
     transition: 0.4s;
@@ -767,79 +751,72 @@ text-transform: uppercase;
     margin-bottom: 72px;
   }
 
-
- 
-
-
-
- 
-  .luxury-page{
+  .luxury-page {
     padding: 50px 0;
   }
-  .quote-text{
+  .quote-text {
     width: 100%;
     font-size: 24px;
   }
-  .quote-section{
+  .quote-section {
     margin-bottom: 32px;
   }
-  .philosophy__content{
+  .philosophy__content {
     padding: 42px 0;
     display: flex;
     flex-direction: column-reverse;
-
   }
-  .philosophy__title{
-order: -1;
-margin-bottom: 0;
+  .philosophy__title {
+    order: -1;
+    margin-bottom: 0;
   }
-  .philosophy__description{
+  .philosophy__description {
     margin-bottom: 36px;
   }
-  .philosophy__image{
-   
+  .philosophy__image {
     height: 470px;
   }
-  .philosophy__subtitle{
+  .philosophy__subtitle {
     font-size: 14px;
   }
-  .philosophy__title, .machines-title{
+  .philosophy__title,
+  .machines-title {
     font-size: 24px;
     margin-bottom: 24px;
   }
-  .philosophy__description, .machines-list{
+  .philosophy__description,
+  .machines-list {
     font-size: 14px;
   }
- .years{
+  .years {
     height: 397px;
     padding: 70px 0;
     background-position: 86% 0;
-
- }
- .dekla{
+  }
+  .dekla {
     padding: 50px 0;
- }
- .dekla-box{
+  }
+  .dekla-box {
     gap: 24px;
     padding: 66px 0;
- }
- .dekla-box-text-title{
+  }
+  .dekla-box-text-title {
     font-size: 24px;
     margin-bottom: 24px;
- }
- .dekla-box-text-desc{
+  }
+  .dekla-box-text-desc {
     font-size: 14px;
- }
- .years-box-title{
+  }
+  .years-box-title {
     font-size: 18px;
- }
- .years-box-subtitle{
+  }
+  .years-box-subtitle {
     font-size: 14px;
- }
-  .philosophy__container{
+  }
+  .philosophy__container {
     gap: 24px;
   }
-  .principles{
+  .principles {
     padding-top: 70px;
   }
   .footer_logo {
@@ -871,20 +848,19 @@ margin-bottom: 0;
     width: 12px;
     height: 12px;
   }
-.principles__subtitle{
+  .principles__subtitle {
     font-size: 16px;
-
-}
-.principles__text{
+  }
+  .principles__text {
     font-size: 14px;
-}
-.principles__grid{
+  }
+  .principles__grid {
     gap: 24px;
-}
-.principles__title{
+  }
+  .principles__title {
     font-size: 24px;
     margin-bottom: 32px;
-}
+  }
 }
 
 /* Мобильные устройства (до 530px) */
@@ -892,13 +868,12 @@ margin-bottom: 0;
   .header_wrapp {
     height: 100vh;
   }
-  .header_logo-link{
+  .header_logo-link {
     height: 40px;
   }
 
   .text-main {
     top: 170px;
-   
   }
 
   .text-main-title {
@@ -906,11 +881,7 @@ margin-bottom: 0;
     width: 300px;
   }
 
-
-
-
-
-  .philosophy__container{
+  .philosophy__container {
     grid-template-columns: 1fr;
   }
 
@@ -960,42 +931,40 @@ margin-bottom: 0;
     width: 24px;
     height: 24px;
   }
-.philosophy__content{
+  .philosophy__content {
     padding: 0;
     flex-direction: column;
-}
-.philosophy__title{
-order: 0;
-}
-.philosophy__description{
+  }
+  .philosophy__title {
+    order: 0;
+  }
+  .philosophy__description {
     margin-bottom: 0;
-}
-  .years{
+  }
+  .years {
     height: 593px;
-    background-image: url('../images/AboutSectionImgMob.jpg');
+    background-image: url("../images/AboutSectionImgMob.jpg");
     background-position: 0 35%;
     padding: 56px 0;
   }
-  .years .container{
+  .years .container {
     justify-content: flex-start;
   }
-  .years-box{
+  .years-box {
     width: 100%;
   }
-  .dekla-box{
+  .dekla-box {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0;
   }
-  .dekla-box-img{
+  .dekla-box-img {
     height: 500px;
   }
-  .principles{
+  .principles {
     padding-top: 56px;
   }
-  .principles__grid{
+  .principles__grid {
     grid-template-columns: 1fr;
   }
-
- 
 }

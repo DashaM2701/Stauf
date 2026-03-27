@@ -274,7 +274,6 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-family: "EB Garamond", serif;
-  
 }
 .btn-outline:active {
   background: var(--bg-btn);
@@ -286,14 +285,13 @@
   color: var(--bg-btn);
   transition: 0.3s all;
 }
-.text-main-subtitle{
+.text-main-subtitle {
   font-family: "Gilroy", sans-serif;
-font-size: 24px;
+  font-size: 24px;
   letter-spacing: 0.06em;
   margin-bottom: 18px;
   text-transform: uppercase;
   color: var(--text);
-
 }
 .luxury-page {
   padding: 150px 0;
@@ -304,18 +302,16 @@ font-size: 24px;
   position: relative;
   text-align: center;
   margin-bottom: 100px;
-  
 }
 
-
 .quote-section::before {
-  content: '“';
+  content: "“";
   position: absolute;
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
   font-family: "EB Garamond", serif;
-  
+
   font-size: 120px;
   color: #f0f0f0;
   z-index: -1;
@@ -323,20 +319,19 @@ font-size: 24px;
 
 .quote-text {
   font-family: "EB Garamond", serif;
-  
+
   font-style: italic;
   font-size: 32px;
-  color:var(--dark);
+  color: var(--dark);
   max-width: 1090px;
   margin: 0 auto;
   text-align: center;
 }
 
-
 .philosophy__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center; 
+  align-items: center;
   gap: 48px;
 }
 
@@ -355,23 +350,21 @@ font-size: 24px;
   padding: 87px 0;
 }
 
-
 .philosophy__title {
   font-family: "EB Garamond", serif;
-  
+
   font-size: 32px;
 
- letter-spacing: 0.06em;
+  letter-spacing: 0.06em;
   margin-bottom: 112px;
   text-transform: uppercase;
 }
 
 .philosophy__description p {
   font-family: "Gilroy", sans-serif;
-  
 
   color: var(--text-grey-dark);
-  
+
   text-align: justify;
 }
 
@@ -406,7 +399,7 @@ font-size: 24px;
 .video-preview-card {
   position: relative;
   display: block;
- 
+
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #000;
@@ -420,7 +413,6 @@ font-size: 24px;
   overflow: hidden;
   background-color: #000;
   transition: 0.3s all;
-
 }
 
 .card_img-wrap.card_img {
@@ -432,7 +424,6 @@ font-size: 24px;
   object-fit: cover;
   transition: transform 0.5s ease-out;
   transform-origin: center center;
-
 }
 
 .card_overlay {
@@ -496,38 +487,31 @@ font-size: 24px;
 
 .machines-section {
   padding-bottom: 150px;
-  
- 
 }
 
 .machines-container {
- 
   display: grid;
 
-  grid-template-columns: 1.2fr 1fr; 
+  grid-template-columns: 1.2fr 1fr;
   gap: 48px;
   align-items: center;
 }
 
 .machines-title {
   font-family: "EB Garamond", serif;
-  
+
   font-size: 32px;
-  
-  
+
   letter-spacing: 0.06em;
   margin-bottom: 112px;
   text-transform: uppercase;
 }
 
-
 .machines-description {
   letter-spacing: 0.06em;
   font-family: "Gilroy", sans-serif;
-  
-  
+
   color: var(--text-grey-dark);
- 
 }
 
 .machines-list {
@@ -549,7 +533,7 @@ font-size: 24px;
 .machine-img {
   width: 100%;
   height: 500px;
-  aspect-ratio: 2 / 3; 
+  aspect-ratio: 2 / 3;
   overflow: hidden;
 }
 
@@ -563,17 +547,16 @@ font-size: 24px;
   position: relative;
   width: 100%;
   height: 600px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   color: var(--text);
   position: relative;
- 
 }
-.video-hero .container{
-    width: 100%;
+.video-hero .container {
+  width: 100%;
 }
 
 .video-hero__bg {
@@ -585,7 +568,7 @@ font-size: 24px;
   z-index: 1;
 }
 
-.video-hero__bg img, 
+.video-hero__bg img,
 .video-hero__bg video {
   width: 100%;
   height: 100%;
@@ -599,17 +582,15 @@ font-size: 24px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
-
 
 .video-hero__content {
   position: relative;
   z-index: 3;
   width: 100%;
- 
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -619,7 +600,7 @@ font-size: 24px;
   font-family: "EB Garamond", serif;
 
   font-size: 32px;
-  
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 112px;
@@ -627,32 +608,27 @@ font-size: 24px;
 
 .video-hero__subtitle {
   font-family: "Gilroy", sans-serif;
-  
- 
+
   letter-spacing: 0.06em;
   color: var(--text-grey);
-  
+
   max-width: 350px;
 }
 
 /* Кнопка Play */
 .video-hero__play-btn {
-position: absolute;
-left: 50%;
-transition: 0.3s all;
-cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transition: 0.3s all;
+  cursor: pointer;
 }
-
-
 
 .video-hero__play-btn:hover {
   transform: scale(1.1);
 }
 
 .gallery {
-
   padding-bottom: 150px;
- 
 }
 
 .gallery__title {
@@ -662,17 +638,16 @@ cursor: pointer;
   font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
- 
-  
+
   margin-bottom: 64px;
 }
 
 .gallery__grid {
   display: grid;
-  
+
   grid-template-columns: repeat(4, 1fr);
 
-  grid-auto-rows: 180px; 
+  grid-auto-rows: 180px;
   gap: 15px;
 }
 
@@ -683,22 +658,37 @@ cursor: pointer;
   display: block;
 }
 
-
-.item-1 { grid-column: 1; grid-row: 1; }
-.item-2 { grid-column: 1; grid-row: 2; }
-
-
-.item-3 { 
-  grid-column: 2 / 4; 
-  grid-row: 1 / 3; 
+.item-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-2 {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.item-4 { grid-column: 4; grid-row: 1 / 3; }
+.item-3 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
 
+.item-4 {
+  grid-column: 4;
+  grid-row: 1 / 3;
+}
 
-.item-5 { grid-column: 1 / 3; grid-row: 3; }
-.item-6 { grid-column: 3; grid-row: 3; }
-.item-7 { grid-column: 4; grid-row: 3; }
+.item-5 {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+.item-6 {
+  grid-column: 3;
+  grid-row: 3;
+}
+.item-7 {
+  grid-column: 4;
+  grid-row: 3;
+}
 
 /* ===== Footer ===== */
 .footer {
@@ -826,7 +816,7 @@ cursor: pointer;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #0A0D0E;
+    background: #0a0d0e;
     flex-direction: column;
     padding: 130px 20px;
     transition: 0.4s;
@@ -935,13 +925,6 @@ cursor: pointer;
     margin-bottom: 72px;
   }
 
-
- 
-
-
-
- 
-
   .repository-box-head {
     margin-bottom: 38px;
   }
@@ -970,50 +953,51 @@ cursor: pointer;
   .card_img-wrap {
     height: 250px;
   }
-  .machines-gallery{
+  .machines-gallery {
     grid-template-columns: 1fr;
   }
-  .machine-img{
+  .machine-img {
     height: 270px;
   }
-  .luxury-page{
+  .luxury-page {
     padding: 50px 0;
   }
-  .quote-text{
+  .quote-text {
     width: 100%;
     font-size: 24px;
   }
-  .quote-section{
+  .quote-section {
     margin-bottom: 32px;
   }
-  .philosophy__content{
+  .philosophy__content {
     padding: 42px 0;
-
   }
-  .philosophy__image{
+  .philosophy__image {
     order: 1;
     height: 470px;
   }
-  .philosophy__title, .machines-title{
+  .philosophy__title,
+  .machines-title {
     font-size: 24px;
     margin-bottom: 24px;
   }
-  .philosophy__description, .machines-list{
+  .philosophy__description,
+  .machines-list {
     font-size: 14px;
   }
-  .video-hero__title{
+  .video-hero__title {
     font-size: 24px;
   }
-  .video-hero{
+  .video-hero {
     height: 390px;
   }
-  .gallery{
+  .gallery {
     padding-bottom: 50px;
   }
-  .machines-section{
+  .machines-section {
     padding-bottom: 56px;
   }
-  .philosophy__container{
+  .philosophy__container {
     gap: 24px;
   }
   .footer_logo {
@@ -1045,7 +1029,6 @@ cursor: pointer;
     width: 12px;
     height: 12px;
   }
-
 }
 
 /* Мобильные устройства (до 530px) */
@@ -1053,20 +1036,18 @@ cursor: pointer;
   .header_wrapp {
     height: 100vh;
   }
-  .header_logo-link{
+  .header_logo-link {
     height: 40px;
   }
 
   .text-main {
     top: 170px;
-   
   }
 
   .text-main-title {
     font-size: 30px;
     width: 300px;
   }
-
 
   .card_play-btn {
     height: 64px;
@@ -1081,36 +1062,36 @@ cursor: pointer;
     justify-content: center;
     margin-top: 32px;
   }
-  .philosophy__container{
+  .philosophy__container {
     grid-template-columns: 1fr;
   }
-.machines-container{
+  .machines-container {
     grid-template-columns: 1fr;
-}
+  }
 
-.machines-gallery{
+  .machines-gallery {
     grid-template-columns: 1fr 1fr;
-}
-.video-hero{
+  }
+  .video-hero {
     height: 544px;
-}
-.video-hero__text{
+  }
+  .video-hero__text {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-}
+  }
   .footer_top {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-.gallery__title{
+  .gallery__title {
     font-size: 24px;
-}
-.gallery__title{
+  }
+  .gallery__title {
     margin-bottom: 32px;
-}
+  }
   .footer_col.footer_col-info {
     display: none;
   }
@@ -1153,8 +1134,8 @@ cursor: pointer;
   }
   .gallery__grid {
     /* На мобилке делаем 2 колонки */
-    grid-template-columns: 1fr 1fr; 
-    grid-auto-rows: minmax(100px, auto); 
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
     gap: 10px;
   }
 
@@ -1163,44 +1144,49 @@ cursor: pointer;
   }
 
   /* 1. Первые две картинки в один ряд */
-  .item-1 { grid-column: 1; grid-row: 1; }
-  .item-2 { grid-column: 2; grid-row: 1; }
+  .item-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .item-2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
 
   /* 2. Большая центральная картинка на весь ряд */
-  .item-3 { 
-    grid-column: 1 / 3; 
-    grid-row: 2; 
+  .item-3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
     aspect-ratio: 1 / 1; /* Чтобы была квадратной/крупной */
   }
 
   /* 3. Левая высокая картинка (циферблат крупно) */
-  .item-4 { 
-    grid-column: 1; 
+  .item-4 {
+    grid-column: 1;
     grid-row: 3 / 5; /* Занимает 2 строки в высоту */
   }
 
   /* 4. Маленькие картинки справа от высокой */
-  .item-6 { grid-column: 2; grid-row: 3; }
-  .item-7 { grid-column: 2; grid-row: 4; }
+  .item-6 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .item-7 {
+    grid-column: 2;
+    grid-row: 4;
+  }
 
   /* 5. Нижняя широкая картинка (стрелка) */
-  .item-5 { 
-    grid-column: 1 / 3; 
-    grid-row: 5; 
+  .item-5 {
+    grid-column: 1 / 3;
+    grid-row: 5;
   }
-  
-
- 
 }
-@media(max-width:380px){
-   .card_img-wrap {
+@media (max-width: 380px) {
+  .card_img-wrap {
     height: 544px;
   }
 }
-
-
-
-
 
 /* ===== Hover-эффекты только для устройств с мышью (десктоп) ===== */
 @media (hover: hover) and (pointer: fine) {
@@ -1214,12 +1200,10 @@ cursor: pointer;
     background: var(--bg-btn);
     color: var(--text);
   }
-  .btn-outline:hover{
-  background: var(--bg-btn);
-  color: var(--text);
-}
-
-
+  .btn-outline:hover {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
 
   .card-container:hover .watch-block.active:not(:hover) {
     transform: scale(1);

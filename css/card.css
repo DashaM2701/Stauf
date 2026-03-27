@@ -501,11 +501,7 @@
 }
 
 [data-theme="dark"] .section-hero {
-  background: linear-gradient(
-    to right,
-    #24262a 50%,
-    #383a3e 50%
-  );
+  background: linear-gradient(to right, #24262a 50%, #383a3e 50%);
 }
 
 [data-theme="dark"] .toggle-img-sun {
@@ -1722,10 +1718,9 @@
   height: 1px;
   background-color: var(--text-grey-dark);
 }
-.hero-details-mob{
-    display: none;
+.hero-details-mob {
+  display: none;
 }
-
 
 /* ============================================
    АДАПТИВНЫЕ СТИЛИ (МЕДИА-ЗАПРОСЫ)
@@ -2158,6 +2153,37 @@
     min-width: 150px !important;
     width: 150px !important;
   }
+  .welcome-full-content {
+    padding: 40px;
+  }
+  .welcome-full-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .welcome-full-subtitle {
+    font-size: 14px;
+  }
+  .passport-form-side {
+    padding: 24px;
+  }
+  .passport-flex {
+    grid-template-columns: 2fr 1fr;
+  }
+  .passport-title {
+    font-size: 14px;
+    margin-bottom: 33px;
+  }
+  .passport-steps li,
+  .passport-form input {
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  .passport-form .input-group {
+    margin-bottom: 0;
+  }
+  .passport-submit {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2386,6 +2412,32 @@
 
   .pop-up-container {
     position: relative;
+  }
+  .passport-flex {
+    grid-template-columns: 1fr;
+  }
+  .passport-form-side {
+    order: 1;
+  }
+  .passport-image-side {
+    height: 260px;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .passport-steps {
+    margin-bottom: 20px;
+  }
+  .passport-container {
+    width: 70%;
   }
 }
 

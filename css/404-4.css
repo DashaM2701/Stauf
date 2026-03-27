@@ -9,10 +9,8 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
-p{
+p {
   font-family: "Gilroy", sans-serif;
- 
-
 }
 
 /* ===== Глобальные стили (Splide, контейнер, анимации) ===== */
@@ -386,51 +384,46 @@ p{
   transition: 0.3s all;
   font-family: "Gilroy", sans-serif;
 }
-.error-bg{
-    padding: 80px 0;
-   
-   
-   
+.error-bg {
+  padding: 80px 0;
 }
-.error-img img{
-    height: 500px;
-    width: 100%;
-    object-fit: contain;
-    
-    
+.error-img img {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
 }
-.text-error-title{
+.text-error-title {
   font-family: "EB Garamond", serif;
-font-size: 64px;
-margin-bottom: 129px;
-letter-spacing: 0.06em;
-color: var(--text);
-text-transform: uppercase;
+  font-size: 64px;
+  margin-bottom: 129px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  text-transform: uppercase;
 }
-.error-bg .container{
- display: grid;
- grid-template-columns: 1fr 3fr;
- align-items: center;
+.error-bg .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
 }
-.error-text{
+.error-text {
   font-family: "Gilroy", sans-serif;
-font-size: 20px;
-letter-spacing: 0.06em;
-margin-bottom: 44px;
-color: var(--text-grey);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 44px;
+  color: var(--text-grey);
 }
-.text-error-title.text-error-title-mob{
-    display: none;
+.text-error-title.text-error-title-mob {
+  display: none;
 }
 
-@media(max-width:1000px){
-    .text-wrapp{
-        width: 220px;
-    }
-    .text-error-title{
-        font-size: 32px;
-        margin-bottom: 60px;
-    }
+@media (max-width: 1000px) {
+  .text-wrapp {
+    width: 220px;
+  }
+  .text-error-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
 }
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
@@ -583,18 +576,17 @@ color: var(--text-grey);
     height: 12px;
   }
 
-  .error-text{
+  .error-text {
     font-size: 18px;
     margin-bottom: 24px;
   }
-  .error-bg{
+  .error-bg {
     padding: 80px 0;
   }
-  .error-img img{
+  .error-img img {
     height: 300px;
   }
 }
-
 
 /* Мобильные устройства (до 530px) */
 @media (max-width: 530px) {
@@ -613,8 +605,6 @@ color: var(--text-grey);
     font-size: 30px;
     width: 300px;
   }
-
-
 
   .footer_top {
     flex-direction: column;
@@ -665,25 +655,25 @@ color: var(--text-grey);
   .text-item {
     padding-left: 0;
   }
-  
-  .error-text{
+
+  .error-text {
     font-size: 16px;
     text-align: center;
   }
- .error-bg .container{
+  .error-bg .container {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
- }
- .text-wrapp .text-error-title{
+  }
+  .text-wrapp .text-error-title {
     display: none;
- }
- .text-wrapp{
+  }
+  .text-wrapp {
     order: 1;
- }
- .text-error-title.text-error-title-mob{
+  }
+  .text-error-title.text-error-title-mob {
     display: block;
- }
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -710,4 +700,3 @@ color: var(--text-grey);
     color: var(--text);
   }
 }
- 

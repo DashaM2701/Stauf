@@ -1,7 +1,6 @@
-
-
 /* Убираем отступы и поля у всех элементов */
-html, body { 
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -12,7 +11,8 @@ html, body {
 }
 
 /* Убираем стили списков */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -23,18 +23,34 @@ a {
 }
 
 /* Убираем стили у заголовков */
-h1, h2, h3, h4, h5, h6 {
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
 /* Убираем курсив у тега address и других */
-address, cite, dfn, em, var {
+address,
+cite,
+dfn,
+em,
+var {
   font-style: normal;
 }
 
 /* Уравниваем поведение блоков */
-article, aside, footer, header, nav, section, main, figure, figcaption {
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figure,
+figcaption {
   display: block;
 }
 
@@ -47,7 +63,10 @@ img {
 }
 
 /* Сброс инпутов и кнопок */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   border: none;
   outline: none;
@@ -68,7 +87,6 @@ table {
 
 /* Установка базовых стилей body */
 body {
-
   background-color: #fff;
   color: #000;
 }
@@ -84,11 +102,11 @@ body {
 
 /* сам скролл */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
 }
 
 /* при наведении */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
