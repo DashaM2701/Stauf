@@ -4,7 +4,7 @@
 function isMobile() { return window.innerWidth <= 530; }
   // Track which half the mouse is in
   banner.addEventListener('mousemove', (e) => {
-     if (isMobile()) return;
+   
     const rect = banner.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const half = rect.width / 2;
@@ -20,7 +20,7 @@ function isMobile() { return window.innerWidth <= 530; }
 
   // When mouse leaves banner — go back to left (default)
   banner.addEventListener('mouseleave', () => {
-      if (isMobile()) return;
+      
     banner.classList.remove('state-right');
     banner.classList.add('state-left');
   });

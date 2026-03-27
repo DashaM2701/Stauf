@@ -405,6 +405,22 @@
   left: 50%;
   transform: translateX(-53%);
 }
+.hero-watch-img-arrows-clock{
+    position: absolute;
+      width: 145px !important;
+    height: 145px !important;
+    left: 44%;
+    top: 29%;
+  transform: translateX(-50%);
+}
+.save-arrows-clock{
+      position: absolute;
+    width: 180px !important;
+    height: 180px !important;
+    top: 50%;
+    transform: translate(-60%, -62%);
+    left: 50%;
+}
 
 .hero-bottom {
   display: flex;
@@ -547,7 +563,7 @@
   color: var(--text);
 }
 
-[data-theme="dark"] .btn {
+[data-theme="dark"] .btn:not(.tryon-content .btn) {
   background: var(--text);
   color: var(--dark);
 }
@@ -748,9 +764,14 @@
 .dial-thumb:hover img {
   transform: scale(1.05);
 }
-
+.dial-thumb.active {
+  padding: 10px 0;
+}
 .dial-thumb.active img {
   opacity: 1;
+}
+.splide__list{
+  align-items:center;
 }
 
 .dial-thumb-label {
@@ -1428,7 +1449,7 @@
    POP-UP (МОДАЛЬНЫЕ ОКНА)
    ============================================ */
 .pop-up {
-  padding: 60px;
+  padding: 50px;
   background: var(--text);
   width: 740px;
 }
@@ -1458,7 +1479,16 @@
   color: var(--text-grey-dark);
   margin-bottom: 58px;
 }
-
+.pop-up-content .pop-up-img{
+  height: 300px;
+  object-fit: cover;
+}
+.splide:not(.is-overflow) .splide__pagination{
+  display: flex !important;
+}
+.pop-up-content .press_tabs{
+  margin-bottom: 20px;
+}
 #popup-case,
 #pop-hand,
 #pop-dial {
@@ -1467,6 +1497,13 @@
   right: 0;
   top: 20px;
   z-index: 11;
+}
+.popup-content{
+  display: none;
+}
+.popup-content.active {
+    display: block !important;
+    opacity: 1;
 }
 
 #pop-up-more-detalis.active {
@@ -1527,6 +1564,10 @@
 .pop-up-scroll-content {
   overflow-y: auto;
   padding-right: 20px;
+  margin-top: 10px;
+}
+#splide-popup-hand .pop-up-img{
+  height: 300px;
 }
 
 .pop-up-scroll-content p {
@@ -1691,7 +1732,7 @@
   margin-bottom: 74px;
 }
 
-.tab_btn {
+.tab_btn, .tab_btn-hero {
   background: none;
   border: none;
   padding: 20px 0;
@@ -1703,13 +1744,14 @@
   cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
+  border-bottom: 1px solid transparent;
 }
 
-.tab_btn.active {
-  color: var(--text-grey-dark);
+.tab_btn.active, .tab_btn-hero.active {
+  color: var(--dark);
 }
 
-.tab_btn.active::after {
+.tab_btn.active::after, .tab_btn-hero.active::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -1721,7 +1763,74 @@
 .hero-details-mob {
   display: none;
 }
+/* --- СТИЛИ ДЛЯ ВИДЕО ПОПАПА --- */
 
+.pop-up-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Очень темный фон для фокуса на видео */
+  display: none; /* Скрыт по умолчанию */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Поверх всех остальных элементов */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Активное состояние попапа */
+.pop-up-video.active {
+  display: flex;
+  opacity: 1;
+}
+
+.pop-up-video-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Контейнер для сохранения пропорций 16:9 */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.pop-up-video #closeBtnVideo {
+  position: absolute;
+  top: -40px; 
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2010;
+  transition: transform 0.3s ease;
+}
+
+.pop-up-video #closeBtnVideo:hover {
+  transform: rotate(90deg);
+}
+
+.pop-up-video #closeBtnVideo img {
+  width: 24px;
+  height: 24px;
+}
 /* ============================================
    АДАПТИВНЫЕ СТИЛИ (МЕДИА-ЗАПРОСЫ)
    ============================================ */
@@ -1735,6 +1844,15 @@
   .hero-watch-img img {
     min-width: 200px;
     width: 200px;
+  }
+  .hero-watch-img-arrows-clock{
+    width: 60px !important;
+    height: 52px !important;
+    top: 42%;
+  }
+  .save-arrows-clock{
+    height: 140px !important;
+    width: 140px !important; 
   }
 
   .hero-watch-img-dial {
@@ -2065,21 +2183,23 @@
     display: block;
   }
 
-  .hero-content-change:not(:first-child) {
+  .hero-content-change {
     display: none;
+  }
+  .hero-content-change.active{
+    display: flex;
   }
 
-  .hero-content-change .deal-label:not(.hero-details-mob .deal-label),
-  .hero-content-change .deal-box:not(.hero-details-mob .deal-box) {
-    display: none;
-  }
+ .deal-box{
+  margin-bottom: 24px;
+ }
 
   .section-hero .container {
     display: flex;
     flex-direction: column;
   }
 
-  .tab_btn {
+  .tab_btn, .tab_btn-hero {
     font-size: 18px !important;
     flex-shrink: 0;
     min-width: 100px;
@@ -2092,8 +2212,13 @@
   }
 
   .hero-details-mob .press_tabs {
-    padding: 16px 0;
+   padding-top: 16px;
+   padding-bottom: 0;
   }
+  .hero-details-mob .press_tabs .tab_btn,  .hero-details-mob .press_tabs .tab_btn-hero{
+    padding-bottom: 16px;
+  }
+ 
 
   .hero-right {
     order: -1;
@@ -2119,11 +2244,11 @@
     background: linear-gradient(to top, #24262a 50%, #383a3e 50%);
   }
 
-  [data-theme="dark"] .hero-details-mob .press_tabs .tab_btn.active {
+  [data-theme="dark"] .hero-details-mob .press_tabs .tab_btn-hero.active {
     color: var(--text);
   }
 
-  [data-theme="dark"] .hero-details-mob .press_tabs .tab_btn {
+  [data-theme="dark"] .hero-details-mob .press_tabs .tab_btn-hero {
     color: #959595;
   }
 
@@ -2147,6 +2272,12 @@
   .hero-watch-img img {
     min-width: 170px;
     width: 170px;
+  }
+  .hero-watch-img-arrows-clock{
+    left: 48%;
+    height: 45px !important; 
+    width: 50px;
+    top: 37%;
   }
 
   .hero-watch-img-dial {
@@ -2211,7 +2342,10 @@
   .pop-up-watch-preview img {
     height: 300px;
   }
-
+  .save-arrows-clock{
+    height: 135px !important;
+    width: 120px !important;
+  }
   .save-dial {
     width: 150px !important;
     height: 150px !important;
@@ -2317,6 +2451,9 @@
   .commitment__image {
     height: 500px;
   }
+  .pop-up-content .pop-up-img{
+    height: 200px;
+  }
 
   .footer_top {
     flex-direction: column;
@@ -2353,6 +2490,9 @@
   .footer_bottom {
     flex-direction: column;
     gap: 12px;
+  }
+  .hero-watch-img-arrows-clock{
+    left: 47%;
   }
 
   .footer_copy,

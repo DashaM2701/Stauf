@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initCustomSlider(
     "#splide-featured",
     {
-      type: "loop",
+      
       perPage: 3,
       perMove: 1,
       gap: "1.5rem",
@@ -162,7 +162,31 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: true,
     breakpoints: {},
   });
-     initCustomSlider("#splide-popup-hand", {
+     initCustomSlider("#splide-popup-hand1",{
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
+      initCustomSlider("#splide-popup-hand2",{
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
+      initCustomSlider("#splide-popup-hand3",{
+    perPage: 1,
+    perMove: 1,
+    gap: "1.5rem",
+    arrows: false,
+    pagination: true,
+    breakpoints: {},
+  });
+      initCustomSlider("#splide-popup-hand4",{
     perPage: 1,
     perMove: 1,
     gap: "1.5rem",

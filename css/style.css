@@ -877,7 +877,7 @@
 .banner {
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: 500px;
   width: 80%;
   margin: 0 auto;
 }
@@ -965,7 +965,7 @@
    STATE: LEFT ACTIVE (default)
    ══════════════════ */
 .banner.state-left .watch-left img {
-  width: 200px;
+  width: 360px;
   opacity: 1;
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35));
 }
@@ -974,12 +974,12 @@
   transform: translateY(-50%);
 }
 .banner.state-left .watch-right img {
-  width: 120px;
+  width: 250px;
   opacity: 0.72;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.2));
 }
 .banner.state-left .text-left {
-  left: 230px;
+  left: 364px;
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
@@ -992,7 +992,7 @@
    STATE: RIGHT ACTIVE
    ══════════════════ */
 .banner.state-right .watch-left img {
-  width: 120px;
+  width: 250px;
   opacity: 0.72;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.2));
 }
@@ -1001,12 +1001,12 @@
   transform: translateY(-50%);
 }
 .banner.state-right .watch-right img {
-  width: 200px;
+  width: 360px;
   opacity: 1;
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.38));
 }
 .banner.state-right .text-left {
-  left: 230px;
+  left: 270px;
   opacity: 0;
   transform: translateY(-50%) translateX(-12px);
 }
@@ -1038,12 +1038,47 @@
 .footer_col-info-mob {
   display: none;
 }
+@media (max-width: 1094px) {
+  .banner{
+    width: 100%;
+  }
+}
+
 
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .text-title {
     margin-bottom: 40px;
   }
+}
+@media (max-width: 886px) {
+ .banner.state-left .watch-left img{
+  width: 300px;
+ }
+ .banner.state-left .text-left{
+  left: 300px;
+ }
+ .banner.state-left .watch-right img{
+  width: 200px;
+ }
+  .banner{
+    height: 450px;
+  }
+
+
+.banner.state-right .watch-left img {
+  width: 200px;
+  
+}
+.banner.state-right .watch-right {
+  right: 300px;
+  transform: translateY(-50%);
+}
+.banner.state-right .watch-right img {
+  width: 300px;
+
+}
+
 }
 
 /* Мобильные устройства (до 768px) */
@@ -1353,7 +1388,7 @@
     flex-grow: 1;
   }
   .banner {
-    height: 240px;
+    height: 350px;
     width: 100%;
   }
   .watch-left img {
@@ -1373,30 +1408,106 @@
     font-size: 14px;
     max-width: 140px;
   }
-  .banner.state-right .watch-right img,
-  .banner.state-left .watch-left img {
-    width: 155px;
+  .banner.state-left .watch-left img{
+  width: 250px;
+ }
+ .banner.state-left .text-left{
+  left: 280px;
+ }
+ .banner.state-left .watch-right img{
+  width: 180px;
+ }
+  .banner{
+    height: 450px;
   }
-  .banner:has(.zone-right:hover) .watch-right {
-    right: 155px;
+
+
+.banner.state-right .watch-left img {
+  width: 180px;
+  
+}
+.banner.state-right .watch-right {
+  right: 156px;
+  transform: translateY(-50%);
+}
+.banner.state-right .watch-right img {
+  width: 250px;
+
+}
+}
+@media (max-width: 560px) {
+.banner {
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
   }
-  .banner:has(.zone-right:hover) .watch-right img {
-    width: 155px !important;
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 18px;
+    width: 100%;
   }
-  .banner:has(.zone-right:hover) .watch-left img {
-    width: 95px;
+
+  /* разделитель между карточками */
+  .card + .card {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
   }
-  .banner:has(.zone-left:hover) .watch-left img {
-    width: 155px !important ;
+
+  /* сбросить все absolute/transition */
+  .watch,
+  .text-block {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transition: none !important;
   }
-  .banner:has(.zone-left:hover) .watch-right img {
-    width: 95px;
+
+  /* одинаковый размер часов */
+  .watch img,
+  .banner.state-left .watch-left img,
+  .banner.state-left .watch-right img,
+  .banner.state-right .watch-left img,
+  .banner.state-right .watch-right img {
+    width: 120px !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.28)) !important;
+    flex-shrink: 0;
   }
-  .banner.state-right .watch-right {
-    right: 200px;
+
+  /* весь текст видимый */
+  .text-block,
+  .banner.state-left .text-left,
+  .banner.state-left .text-right,
+  .banner.state-right .text-left,
+  .banner.state-right .text-right {
+    opacity: 1 !important;
+    pointer-events: all;
+
+    text-align: center;
+  }
+  .text-block.text-right {
+    order: 1;
+  }
+
+  .text-right p {
+    margin-left: 0 !important;
+  }
+
+  .text-block h2 {
+    margin-bottom: 8px;
+  }
+  .text-block p {
+    max-width: 100%;
+    margin-bottom: 14px;
   }
 }
-
 /* Мобильные устройства (до 530px) */
 @media (max-width: 530px) {
   .header_wrapp {
@@ -1563,77 +1674,7 @@
     width: 24px;
     height: 24px;
   }
-  .banner {
-    height: auto;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-  }
-
-  .card {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 22px 18px;
-    width: 100%;
-  }
-
-  /* разделитель между карточками */
-  .card + .card {
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-  }
-
-  /* сбросить все absolute/transition */
-  .watch,
-  .text-block {
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    transition: none !important;
-  }
-
-  /* одинаковый размер часов */
-  .watch img,
-  .banner.state-left .watch-left img,
-  .banner.state-left .watch-right img,
-  .banner.state-right .watch-left img,
-  .banner.state-right .watch-right img {
-    width: 120px !important;
-    opacity: 1 !important;
-    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.28)) !important;
-    flex-shrink: 0;
-  }
-
-  /* весь текст видимый */
-  .text-block,
-  .banner.state-left .text-left,
-  .banner.state-left .text-right,
-  .banner.state-right .text-left,
-  .banner.state-right .text-right {
-    opacity: 1 !important;
-    pointer-events: all;
-
-    text-align: center;
-  }
-  .text-block.text-right {
-    order: 1;
-  }
-
-  .text-right p {
-    margin-left: 0 !important;
-  }
-
-  .text-block h2 {
-    margin-bottom: 8px;
-  }
-  .text-block p {
-    max-width: 100%;
-    margin-bottom: 14px;
-  }
+  
 }
 
 @media (max-width: 380px) {

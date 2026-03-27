@@ -308,6 +308,7 @@
   flex-direction: column;
   gap: 48px;
   transition: 0.3s all;
+  padding: 0 4px;
 }
 .featured-content-card:active .featured-content-card-img {
   scale: 1.1;
@@ -324,7 +325,10 @@
 .arrow_btn-wrap {
   display: flex;
   gap: 24px;
-  display: none;
+  
+}
+.arrow-btn.arrow-next-c, .arrow-btn.arrow-next{
+  opacity: 0.8;
 }
 .arrow-btn img {
   width: 32px;
@@ -815,12 +819,8 @@
     width: 300px;
   }
 
-  .arrow_btn-wrap {
-    display: none;
-  }
-  .featured-content .splide__list {
-    flex-direction: column;
-  }
+ 
+ 
   .novelty-box {
     grid-template-columns: 1fr;
     gap: 48px;

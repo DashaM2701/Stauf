@@ -11,6 +11,9 @@
   --dark: #0a0d0e;
   --watch-scale-factor: 1.25;
 }
+body{
+  overflow: hidden;
+}
 
 /* Тёмная тема (data-theme="dark") */
 [data-theme="dark"] {
@@ -572,6 +575,15 @@
   font-family: "Gilroy", sans-serif;
   border: 1px solid transparent;
   width: 100%;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+.footer{
+  margin-top: auto;
 }
 .tryon-controls,
 .tryon-content {

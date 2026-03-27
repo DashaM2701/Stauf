@@ -1,37 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('mainOverlay') || document.querySelector('.pop-up-overlay');
     const body = document.body;
-    const popupSliders = {};
+    const popupSliders = {}; // Сюда попадают слайдеры, если они инициализируются в другом месте
 
-    // 1. Инициализация всех Splide в попапах
-    const sliderIds = ['#splide-popup', '#splide-popup-dial', '#splide-popup-hand'];
-    sliderIds.forEach(id => {
-        const el = document.querySelector(id);
-        if (el && typeof Splide !== 'undefined') {
-            popupSliders[id] = new Splide(id, {
-                type: 'fade',
-                rewind: true,
-                pagination: false,
-                arrows: true,
-            }).mount();
-        }
-    });
+    // --- 1. ЛОГИКА ТАБОВ (внутри pop-hand) ---
+    const popupHand = document.getElementById('pop-hand');
+    if (popupHand) {
+        const tabs = popupHand.querySelectorAll('.tab_btn');
+        const contents = popupHand.querySelectorAll('.popup-content');
 
-    // 2. Универсальная функция открытия
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                // Переключаем активную кнопку
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Переключаем активный контент
+                contents.forEach(content => {
+                    if (content.getAttribute('data-content') === target) {
+                        content.classList.add('active');
+                        // Исправляем отображение Splide после display: block
+                        window.dispatchEvent(new Event('resize'));
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
+
+    // --- 2. УНИВЕРСАЛЬНЫЕ ФУНКЦИИ ПОПАПОВ ---
     function openPopUp(popupElement) {
         if (!popupElement) {
             console.error("Попап не найден!");
             return;
         }
 
-        // Синхронизация для попапа сохранения
+        // Синхронизация для попапа сохранения (Stauf)
         if (popupElement.id === 'popupSave') {
             const mainDial = document.querySelector('.hero-watch-img-dial');
             const saveDial = popupElement.querySelector('.save-dial');
             if (mainDial && saveDial) saveDial.src = mainDial.src;
         }
 
-        // Показываем оверлей и попап
         if (overlay) {
             overlay.style.display = 'block';
             setTimeout(() => overlay.classList.add('active'), 10);
@@ -39,17 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         popupElement.style.display = 'block';
         setTimeout(() => popupElement.classList.add('active'), 10);
-        
         body.style.overflow = 'hidden';
 
-        // Обновляем слайдер внутри
+        // Обновляем слайдер, если он есть
         const sliderInPopup = popupElement.querySelector('.splide');
         if (sliderInPopup && popupSliders['#' + sliderInPopup.id]) {
             popupSliders['#' + sliderInPopup.id].refresh();
         }
     }
 
-    // 3. Функция закрытия
     function closeAll() {
         const activePopups = document.querySelectorAll('.pop-up, .pop-up-info, .pop-up-save');
         activePopups.forEach(p => {
@@ -64,29 +75,34 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = '';
     }
 
-    // 4. Навешиваем события на ВСЕ кнопки с data-popup
-    // Это заставит работать .btn-more, .overlay-btn и любые другие
+    // --- 3. ОБРАБОТЧИКИ СОБЫТИЙ ---
+
+    // Открытие по data-popup
     document.querySelectorAll('[data-popup]').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = btn.getAttribute('data-popup');
-            openPopUp(document.getElementById(targetId));
-        });
+        // Если это сама кнопка открытия, а не элемент попапа
+        if (btn.tagName !== 'DIV') { 
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = btn.getAttribute('data-popup');
+                openPopUp(document.getElementById(targetId));
+            });
+        }
     });
 
-    // Специальные триггеры (если у них нет data-popup)
+    // Специальный триггер для сохранения
     const saveTrigger = document.querySelector('.hero-download');
-    const popupSave = document.getElementById('popupSave');
-    if (saveTrigger) saveTrigger.addEventListener('click', () => openPopUp(popupSave));
+    if (saveTrigger) {
+        saveTrigger.addEventListener('click', () => openPopUp(document.getElementById('popupSave')));
+    }
 
-    // Кнопки закрытия внутри попапов
+    // Кнопки закрытия
     document.querySelectorAll('.pop-up-close').forEach(btn => {
         btn.addEventListener('click', closeAll);
     });
 
     if (overlay) overlay.addEventListener('click', closeAll);
 
-    // 5. Логика смены циферблата (твоя существующая)
+    // Логика смены циферблата
     const mainDial = document.querySelector('.hero-watch-img-dial');
     const dialThumbs = document.querySelectorAll('.dial-thumb');
 
@@ -105,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Аккордеон и Темы
+    // Переключатель темы
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
         themeToggle.addEventListener('change', () => {
@@ -113,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Аккордеон (Specs)
     document.querySelectorAll('.spec-header').forEach(header => {
         header.addEventListener('click', function() {
             const item = this.parentElement;
@@ -121,32 +138,86 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) item.classList.add('open');
         });
     });
-});
-    const tabBtns = document.querySelectorAll('.tab_btn');
+    
+    const playBtn = document.querySelectorAll('.card_play-btn'); 
+    const popupVideo = document.getElementById('popupVideo');      
+    const videoPlayer = document.getElementById('mainVideoPlayer'); 
+    const closeVideoBtn = document.getElementById('closeBtnVideo'); 
+  
+    const videoOverlay = document.getElementById('mainOverlay') || document.querySelector('.pop-up-overlay');
 
-  // --- Логика переключения табов ---
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetTab = btn.getAttribute('data-tab');
+  
+    function openVideo() {
+        if (!popupVideo || !videoPlayer) return;
 
-            // 1. Убираем активный класс у всех кнопок и добавляем нажатой
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        if (videoOverlay) {
+            videoOverlay.style.display = 'block';
+            setTimeout(() => videoOverlay.classList.add('active'), 10);
+        }
 
-            // 2. Логика отображения контента
-            tabContents.forEach(content => {
-                const contentCategory = content.getAttribute('data-content');
+        popupVideo.style.display = 'flex';
+        setTimeout(() => popupVideo.classList.add('active'), 10);
+        
+        
+        document.body.style.overflow = 'hidden';
 
-                if (targetTab === 'all') {
-                    // Если выбрано "All", показываем все блоки
-                    content.style.display = 'block';
-                } else if (contentCategory === targetTab) {
-                    // Показываем только соответствующий блок
-                    content.style.display = 'block';
-                } else {
-                    // Скрываем остальные
-                    content.style.display = 'none';
-                }
-            });
+       
+        videoPlayer.play().catch(error => {
+            console.log("Автовоспроизведение заблокировано браузером. Пользователь должен нажать Play.");
         });
+    }
+
+   
+    function closeVideo() {
+        if (!popupVideo || !videoPlayer) return;
+
+      
+        popupVideo.classList.remove('active');
+        if (videoOverlay) videoOverlay.classList.remove('active');
+
+       
+        setTimeout(() => {
+            popupVideo.style.display = 'none';
+            if (videoOverlay) videoOverlay.style.display = 'none';
+        }, 400);
+
+       
+        document.body.style.overflow = '';
+
+        
+        videoPlayer.pause();
+       
+    }
+
+  
+    if (playBtn) {
+   playBtn.forEach(play => {
+      play.addEventListener('click', (e) => {
+            e.preventDefault();
+            openVideo();
+        });
+   })
+      
+    }
+
+    if (closeVideoBtn) {
+        closeVideoBtn.addEventListener('click', closeVideo);
+    }
+
+
+    if (popupVideo) {
+        popupVideo.addEventListener('click', (e) => {
+            
+            if (e.target === popupVideo) {
+                closeVideo();
+            }
+        });
+    }
+
+    // Закрытие по клавише Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popupVideo.classList.contains('active')) {
+            closeVideo();
+        }
     });
+});

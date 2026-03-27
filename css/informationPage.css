@@ -1618,4 +1618,8 @@
   .footer_contact-info a:hover {
     color: var(--text);
   }
+    .btn-white:hover {
+    background: var(--bg-btn);
+    color: var(--text);
+  }
 }
